@@ -134,11 +134,14 @@ public class Appa {
 		
 		
 		
-		
+//		wait=new WebDriverWait(driver,10);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='swal2-popup swal2-modal swal2-show']/div[2]")));
+		String result_mes=driver.findElement(By.xpath("//div[@class='swal2-popup swal2-modal swal2-show']/h2")).getText();
 		String confirmation_message=driver.findElement(By.xpath("//*[@class='swal2-popup swal2-modal swal2-show']/div[2]")).getText();
-		System.out.println("print  message ="+confirmation_message);
-		if(confirmation_message.equals("Contact number is already in use.")) {
-			
+		System.out.println("print first message ="+result_mes);
+		System.out.println("print second message="+confirmation_message);
+	if(confirmation_message.equals("Contact number is already in use.")) {
+		
 			driver.findElement(By.xpath("//*[text()='OK']")).click();
 			
 		}
@@ -154,7 +157,12 @@ public class Appa {
 		
 		//create object of readexcelfile
 		readexcel=new ReadExcelFile();
-		readexcel.inserAndEditCell(confirmation_message,count);
+		if(result_mes.equals("Oops...")) {
+			readexcel.inserAndEditCell(confirmation_message,count);
+		}
+		else {
+			readexcel.inserAndEditCell(result_mes,count);
+		}
 
 		
 //		FileOutputStream fis=new FileOutputStream(System.getProperty("user.dir")+"//Externaldata//Data3.xlsx");
