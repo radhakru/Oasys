@@ -53,10 +53,12 @@ public class ReadCamsLogin {
 		System.out.println("CellSize=" + cellSize);
 
 		// initialize the Object[][].
+		
+		
 		object = new String[rowsize + 1][3];
 
 		// store all the excel value to two dimensional array which is object[][].
-		for (int i = rowvalue; i <= rowsize; i++) {
+		for (int i =rowvalue; i <= rowsize; i++) {
 			for (int j = 0; j < 3; j++) {
 
 				object[i][j] = xssfSheet.getRow(i).getCell(j).getStringCellValue();
