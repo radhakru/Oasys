@@ -8,7 +8,6 @@
           <include name="setup"/>
           <include name="teardown"/>
           <include name="click_On_Login"/>
-          <include name="check_Credential" invocation-numbers="2"/>
         </methods>
       </class> <!-- CamsOasys.Cams_Oasys.CamsEntry -->
     </classes>
