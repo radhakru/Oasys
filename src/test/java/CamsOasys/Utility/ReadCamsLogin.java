@@ -1,14 +1,19 @@
-package CamsOasys.Cams_Oasys;
+package CamsOasys.Utility;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 
 public class ReadCamsLogin {
@@ -37,7 +42,7 @@ public class ReadCamsLogin {
 		int cellValue;
 		int rowvalue=1;
 
-		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//Cams_login.xlsx");
+		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//CamsEntry.xlsx");
 		System.out.println("this is executed");
 
 		xssfworkbook = new XSSFWorkbook(fis);
@@ -83,7 +88,7 @@ public class ReadCamsLogin {
 	}
 
 	public void create_cell_cams() throws IOException {
-		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//Cams_login.xlsx");
+		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//CamsEntry.xlsx");
 		xssfworkbook = new XSSFWorkbook(fis);
 		xssfSheet = xssfworkbook.getSheet("Sheet1");
 		short last_cell_value = xssfSheet.getRow(0).getLastCellNum();
@@ -93,11 +98,11 @@ public class ReadCamsLogin {
 			last_cell_value--;
 		}
 
-		if (xssfSheet.getRow(0).getCell(cell_value - 1).getStringCellValue().equals("Password")) {
+		if (xssfSheet.getRow(0).getCell(cell_value - 1).getStringCellValue().equals("Category")) {
 			xssfSheet.getRow(0).createCell(cell_value).setCellValue("Login_Status");
 
 		}
-		fos = new FileOutputStream(System.getProperty("user.dir") + "//Externaldata//Cams_login.xlsx");
+		fos = new FileOutputStream(System.getProperty("user.dir") + "//Externaldata//CamsEntry.xlsx");
 		xssfworkbook.write(fos);
 
 		System.out.println(
@@ -109,7 +114,7 @@ public class ReadCamsLogin {
 
 	//manual entry or hard coded for cell value
 	public void update_cell_value(int rownum, String text) throws IOException {
-		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//Cams_login.xlsx");
+		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//CamsEntry.xlsx");
 		xssfworkbook = new XSSFWorkbook(fis);
 		xssfSheet = xssfworkbook.getSheet("Sheet1");
 		short last_cell = xssfSheet.getRow(rownum).getLastCellNum();
@@ -119,7 +124,7 @@ public class ReadCamsLogin {
 
 		if (xssfSheet.getRow(rownum).getCell(10).getCellType().equals(CellType.STRING)||xssfSheet.getRow(rownum).getCell(11).getCellType().equals(CellType.BLANK)||xssfSheet.getRow(rownum).getCell(11).getCellType().equals(CellType.STRING)) {
 			xssfSheet.getRow(rownum).createCell(11).setCellValue(text);
-			fos = new FileOutputStream(System.getProperty("user.dir") + "//Externaldata//Cams_login.xlsx");
+			fos = new FileOutputStream(System.getProperty("user.dir") + "//Externaldata//CamsEntry.xlsx");
 			xssfworkbook.write(fos);
 		}
 		System.out.println(
@@ -129,5 +134,4 @@ public class ReadCamsLogin {
 		fis.close();
 
 	}
-
 }

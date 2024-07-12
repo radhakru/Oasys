@@ -11,30 +11,36 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.github.dockerjava.api.model.Driver;
 
-public class CamsEntry {
-
+import CamsOasys.Cams_Marketing_Object_page.LoginPage;
+import CamsOasys.Utility.ExtentReport;
+import CamsOasys.Utility.ReadCamsLogin;
+//@Listeners(ExtentReport.class)
+public class CamsEntry extends BaseClass {
 	public WebDriver driver;
 	public Select select;
 	public WebDriverWait wait;
 	public ReadExcelFile readexcel;
 	// public WebElement webElement;
 	public ReadCamsLogin readcamslogin;
-	int count = 0;//0
+	public ExtentReport extentrep;
+
+	public LoginPage lp;
+	int count = 0;// 0
 
 	public JavascriptExecutor js;
 
 	@BeforeTest
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//Driver//chromedriver.exe");
-		if (driver == null) {
-			driver = new ChromeDriver();
-		}
+		driver = getDriver();
+		lp = new LoginPage(driver);
 
 		driver.manage().window().maximize();
 		driver.get("http://cams.demoapplication.in/");
@@ -43,15 +49,10 @@ public class CamsEntry {
 	}
 
 	@Test(priority = 1)
-	public void click_On_Login() throws InterruptedException {
-//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//Driver//chromedriver.exe");
-//		 driver=new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("http://bimsdemo.demoapplication.in/");
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id='btnseed1']")).click();
-		driver.findElement(By.xpath("//*[@id='btnseed1']")).click();
+	public void click_On_Login() throws InterruptedException, IOException {
+
+	
+		lp.click_On_Login_Dashboard();
 
 	}
 
@@ -124,6 +125,8 @@ public class CamsEntry {
 
 		System.out.println("driver present or not =" + driver.getTitle());
 
+		// we call the screenCapture class in here
+
 		int val = 1;
 
 		if (!(name == null)) {
@@ -133,34 +136,39 @@ public class CamsEntry {
 			System.out.println("print in method=" + pass);
 			// wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
 			// js.executeScript("document.getElementById('username').value('name');");
-		System.out.println("print url="+	driver.getCurrentUrl());
-			System.out.println("print title"+driver.getTitle());
-			boolean bol = driver.findElement(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")).isDisplayed();
-			System.out.println(bol);
-			driver.findElement(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")).sendKeys(emailid.trim());
-//			
-//			
-//			driver.findElement(By.xpath("(//input[@name='Email'])[1]")).click();
-//			System.out.println("value reads...");
-			driver.findElement(By.id("userpassword")).sendKeys(pass.trim());
+			System.out.println("print url=" + driver.getCurrentUrl());
+			System.out.println("print title" + driver.getTitle());
 
-			driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
-			readcamslogin = new ReadCamsLogin();
-			System.out.println("Title="+driver.getTitle());
-			if(driver.getCurrentUrl().equals("http://cams.demoapplication.in/Seeds_Web_New/Account/Login")) {
-				String unsuccessful_mes = "not login successfully...";
-				readcamslogin.update_cell_value(count,unsuccessful_mes);
-			}
+			boolean bol = driver
+					.findElement(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']"))
+					.isDisplayed();
+			System.out.println(bol);
 			
+			lp.enter_Username_Field(emailid);
+
+
+
+			lp.enter_Password_Field(pass);
+			ScreenCapture.passScreenCapture();
+
+			lp.click_On_Signin_Button();
+			ScreenCapture.passScreenCapture();
+			System.out.println("Title=" + driver.getTitle());
+			if (driver.getCurrentUrl().equals("http://cams.demoapplication.in/Seeds_Web_New/Account/Login")) {
+				String unsuccessful_mes = "not login successfully...";
+				readcamslogin.update_cell_value(count, unsuccessful_mes);
+				ScreenCapture.failScreenCapture();
+			}
 
 			wait = new WebDriverWait(driver, 10);
-			// wait.until(ExpectedConditions
-			// .visibilityOfElementLocated(By.xpath("//button[@id='page-header-user-dropdown']/span")));
-			String pacs_name = driver.findElement(By.xpath("//button[@id='page-header-user-dropdown']/span")).getText();
-			System.out.println("Pacs name present in dashboard...  " + pacs_name);
 			
-			driver.findElement(By.xpath("//button[@id='page-header-user-dropdown']")).click();		
-			driver.findElement(By.xpath("//span[text()='Sign out']")).click();
+			String pacs_name =lp.text_Value_Of_Profile();
+			
+			System.out.println("Pacs name present in dashboard...  " + pacs_name);
+
+			lp.click_On_Profile_Button();
+
+			lp.click_On_Sign_Out();
 
 			readcamslogin = new ReadCamsLogin();
 			if (val == 1) {
@@ -171,12 +179,13 @@ public class CamsEntry {
 				String success_mes = "successfully login";
 				readcamslogin.update_cell_value(count, success_mes);
 				System.out.println("name present in excel....");
+
 			} else if (!(pacs_name.equalsIgnoreCase(name))) {
-				String unsuccessful_mes = "not login successfully...";
+				String unsuccessful_mes = "Pacs user name not same...";
 				readcamslogin.update_cell_value(count, unsuccessful_mes);
 				System.out.println("name not present in excel..");
+
 			}
-			
 
 		} else {
 			System.out.println("The null value found in name col...");
@@ -185,10 +194,14 @@ public class CamsEntry {
 	}
 
 	@AfterTest
-	public void teardown() throws InterruptedException {
+	public void teardown() throws InterruptedException, IOException {
 		System.out.println("print count...." + count);
 		Thread.sleep(2000);
 		driver.close();
+//		extentrep=new ExtentReport();
+//		extentrep.addreport();
+//		extentrep.onStart(null);
+		
 	}
 
 }
