@@ -33,6 +33,7 @@ public class LoginPage extends BaseClass{
 		wait=new WebDriverWait(ldriver,10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(login_button));
 		ldriver.findElement(login_button).click();
+		//ldriver.findElement(login_button).click();
 	}
 	
 	public void enter_Username_Field(String user) {

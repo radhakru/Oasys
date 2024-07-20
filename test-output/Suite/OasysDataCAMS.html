@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OasysDataCAMS</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 12 14:35:15 IST 2024</td>
+<td>Started on:</td><td>Sat Jul 20 19:27:10 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29583 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14796 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,39 +75,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='CamsOasys.Cams_Oasys.CamsEntry.check_Credential()'><b>check_Credential</b><br>Test class: CamsOasys.Cams_Oasys.CamsEntry<br>Parameters: Ambasarmunda SCS, admin24@gmail.com, Cams@1234</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;page-header-user-dropdown&apos;]/span&quot;}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td title='CamsOasys.Cams_Marketing_Testing.PaddyReportVerify.submit_Paddy_Form_Page()'><b>submit_Paddy_Form_Page</b><br>Test class: CamsOasys.Cams_Marketing_Testing.PaddyReportVerify</td>
+<td><div><pre>org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: move target out of bounds
+  (Session info: chrome=126.0.6478.128)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;OASYS-LAP-146&apos;, ip: &apos;192.168.6.138&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+System info: host: &apos;OASYS-LAP-146&apos;, ip: &apos;192.168.6.161&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c3e317110719bde62e12564ca03fb4b5
-*** Element info: {Using=xpath, value=//button[@id=&apos;page-header-user-dropdown&apos;]/span}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2146d21b2810bff0ee2a614e4ada63e8
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CamsOasys.Cams_Marketing_Object_page.LoginPage.text_Value_Of_Profile(LoginPage.java:50)
-	at CamsOasys.Cams_Oasys.CamsEntry.check_Credential(CamsEntry.java:165)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at CamsOasys.Cams_Marketing_Object_page.ProcurementOfPaddy.enter_District(ProcurementOfPaddy.java:131)
+	at CamsOasys.Cams_Marketing_Testing.PaddyReportVerify.submit_Paddy_Form_Page(PaddyReportVerify.java:102)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace582857168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace582857168'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;page-header-user-dropdown&apos;]/span&quot;}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1905758022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1905758022'><pre>org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: move target out of bounds
+  (Session info: chrome=126.0.6478.128)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;OASYS-LAP-146&apos;, ip: &apos;192.168.6.138&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+System info: host: &apos;OASYS-LAP-146&apos;, ip: &apos;192.168.6.161&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c3e317110719bde62e12564ca03fb4b5
-*** Element info: {Using=xpath, value=//button[@id=&apos;page-header-user-dropdown&apos;]/span}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2146d21b2810bff0ee2a614e4ada63e8
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -119,12 +113,10 @@ Session ID: c3e317110719bde62e12564ca03fb4b5
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at CamsOasys.Cams_Marketing_Object_page.LoginPage.text_Value_Of_Profile(LoginPage.java:50)
-	at CamsOasys.Cams_Oasys.CamsEntry.check_Credential(CamsEntry.java:165)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at CamsOasys.Cams_Marketing_Object_page.ProcurementOfPaddy.enter_District(ProcurementOfPaddy.java:131)
+	at CamsOasys.Cams_Marketing_Testing.PaddyReportVerify.submit_Paddy_Form_Page(PaddyReportVerify.java:102)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -154,8 +146,8 @@ Session ID: c3e317110719bde62e12564ca03fb4b5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>13</td>
-<td>CamsOasys.Cams_Oasys.CamsEntry@2584b82d</td></tr>
+<td>8</td>
+<td>CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -165,25 +157,10 @@ Session ID: c3e317110719bde62e12564ca03fb4b5
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='CamsOasys.Cams_Oasys.CamsEntry.check_Credential()'><b>check_Credential</b><br>Test class: CamsOasys.Cams_Oasys.CamsEntry<br>Parameters: null, null, null</td>
-<td></td>
-<td>0</td>
-<td>CamsOasys.Cams_Oasys.CamsEntry@2584b82d</td></tr>
-<tr>
-<td title='CamsOasys.Cams_Oasys.CamsEntry.check_Credential()'><b>check_Credential</b><br>Test class: CamsOasys.Cams_Oasys.CamsEntry<br>Parameters: Aida SCS, admin209@gmail.com, Cams@1234</td>
+<td title='CamsOasys.Cams_Marketing_Testing.PaddyReportVerify.click_on_login()'><b>click_on_login</b><br>Test class: CamsOasys.Cams_Marketing_Testing.PaddyReportVerify</td>
 <td></td>
 <td>3</td>
-<td>CamsOasys.Cams_Oasys.CamsEntry@2584b82d</td></tr>
-<tr>
-<td title='CamsOasys.Cams_Oasys.CamsEntry.check_Credential()'><b>check_Credential</b><br>Test class: CamsOasys.Cams_Oasys.CamsEntry<br>Parameters: Angapada SCS, admin258@gmail.com, Cams@1234</td>
-<td></td>
-<td>2</td>
-<td>CamsOasys.Cams_Oasys.CamsEntry@2584b82d</td></tr>
-<tr>
-<td title='CamsOasys.Cams_Oasys.CamsEntry.click_On_Login()'><b>click_On_Login</b><br>Test class: CamsOasys.Cams_Oasys.CamsEntry</td>
-<td></td>
-<td>1</td>
-<td>CamsOasys.Cams_Oasys.CamsEntry@2584b82d</td></tr>
+<td>CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9</td></tr>
 </table><p>
 </body>
 </html>
