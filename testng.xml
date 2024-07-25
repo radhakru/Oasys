@@ -6,10 +6,11 @@
 </listeners>
   <test name="OasysDataCAMS">
     <classes>
-     <!--   <class name="CamsOasys.Cams_Oasys.CamsEntry"/>-->
-   <!--  <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/>-->
-    <!--  <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/>-->
-     <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>
+         <!--  <class name="CamsOasys.Cams_Oasys.CamsEntry"/>-->
+            <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/>
+         <!--   <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/>-->
+              <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>
+            <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -27,20 +27,23 @@ public class SeedReport {
 	private By district = By.id("districtid");
 	private By pacs = By.id("pacsid");
 	private By Searchbutton = By.xpath("//*[@type='button' and text()='Search']");
-	private By LasttabledistrictValue = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[2]");
-	private By lasttable_pacsname = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[3]");
-	private By Indent_Placed_To_OSSC = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[4]");
-	private By Lifted = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[5]");
-	private By Achievement = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[6]");
-	private By LastWeek = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[7]");
-	private By Cashsale = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[8]");
-	private By BComponent = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[9]");
-	private By Total = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[10]");
-	private By Balance_with_pacs = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[11]");
-	private By achievement_To_Indent = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[last()]/td[12]");
-	private By pagination = By.xpath("//div[@id='listOfSeedReport_paginate']/ul/li[@id='listOfSeedReport_next']/a");
-	private By next_button = By.xpath("//*[@id='listOfSeedReport_next']/a");
-	private By last_Page=By.xpath("//ul[@class='pagination']/li[last()-1]");
+	private By LasttabledistrictValue = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[2]");
+	private By lasttable_pacsname = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[3]");
+	private By Indent_Placed_To_OSSC = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[4]");
+	private By Lifted = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[5]");
+	private By Achievement = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[6]");
+	private By LastWeek = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[7]");
+	private By Cashsale = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[8]");
+	private By BComponent = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[9]");
+	private By Total = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[10]");
+	private By Balance_with_pacs = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[11]");
+	private By achievement_To_Indent = By.xpath("(//table[@id='listOfSeedReport']/tbody/tr)[1]/td[12]");
+//	private By pagination = By.xpath("//div[@id='listOfSeedReport_paginate']/ul/li[@id='listOfSeedReport_next']/a");
+//	private By next_button = By.xpath("//*[@id='listOfSeedReport_next']/a");
+//	private By last_Page=By.xpath("//ul[@class='pagination']/li[last()-1]");
+
+	private By profilel_page = By.xpath("//button[@id='page-header-user-dropdown']");
+	private By signout = By.xpath("//button[@id='page-header-user-dropdown']/following-sibling::div/a[3]");
 
 	public WebDriverWait createwaitMethodInstance() {
 		wait = new WebDriverWait(ldriver, 120);
@@ -152,17 +155,22 @@ public class SeedReport {
 		return mes;
 	}
 
+	public void click_On_Signout() {
+		ldriver.findElement(profilel_page).click();
+		ldriver.findElement(signout).click();
+
+	}
+
 //	public void click_On_Next() {
 //		ldriver.findElement(next_button).click();
 //	}
 
-	public void click_On_Next_Button() throws InterruptedException {
-		Actions act=new Actions(ldriver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		System.out.println("element is present or not ..." + ldriver.findElement(last_Page).isDisplayed());
-		wait=createwaitMethodInstance();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(last_Page));
-		ldriver.findElement(last_Page).click();
-	}
+//	public void click_On_Next_Button() throws InterruptedException {
+//		ldriver.findElement(By.xpath("//div[@id='listOfSeedReport_filter']/label")).click();
+//		Actions act = new Actions(ldriver);
+//		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+//		System.out.println(ldriver.findElement(last_Page).isDisplayed());
+//		ldriver.findElement(last_Page).click();
+//	}
 
 }

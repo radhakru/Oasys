@@ -1,7 +1,9 @@
 package CamsOasys.Cams_Marketing_Object_page;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +12,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 public class ProcurementOfPaddy {
 	public WebDriver ldriver;
@@ -49,53 +53,67 @@ public class ProcurementOfPaddy {
 		return wait;
 	}
 
-	public void select_Circle() {
+	public void select_Circle(String mes) {
 		ldriver.findElement(arcs_Circle).click();
 		ldriver.findElement(arcs_Circle).click();
-		List<WebElement> listOfoption=ldriver.findElements(By.xpath("//select[@id='arcs']/option"));
+		List<WebElement> listOfoption = ldriver.findElements(By.xpath("//select[@id='arcs']/option"));
 		System.out.println(listOfoption.size());
-		Iterator<WebElement> list=listOfoption.iterator();
-		String[] arr=new String[listOfoption.size()];
-		int i=0;
-		while(list.hasNext()) {
-			arr[i++]=list.next().getText();	
+		Iterator<WebElement> list = listOfoption.iterator();
+		// String[] arr=new String[listOfoption.size()];
+		// int i=0;
+		Set<String> arr = new HashSet<>();
+		while (list.hasNext()) {
+			arr.add(list.next().getText());
 		}
-		ldriver.findElement(arcs_Circle).sendKeys(arr[1]);
+		if (arr.contains(mes)) {
+			ldriver.findElement(arcs_Circle).sendKeys(mes);
+		}
+
+	}
+
+	public void select_Block(String mes) {
+		ldriver.findElement(arcs_Block).click();
+		ldriver.findElement(arcs_Block).click();
+		List<WebElement> listOfoption = ldriver.findElements(By.xpath("//select[@id='block']/option"));
+		System.out.println(listOfoption.size());
+		Iterator<WebElement> list = listOfoption.iterator();
+		Set<String> arr = new HashSet<>();
+		while (list.hasNext()) {
+			arr.add(list.next().getText());
+		}
+		if (arr.contains(mes)) {
+			ldriver.findElement(arcs_Block).sendKeys(mes);
+		}
+		else {
+			System.out.println("block is not present...");
+		}
+	}
+
+	public void select_Society(String mes) throws InterruptedException {
+		ldriver.findElement(Society).click();
+		ldriver.findElement(Society).click();
+		List<WebElement> listOfoption = ldriver.findElements(By.xpath("//select[@id='society']/option"));
+		System.out.println(listOfoption.size());
+		Iterator<WebElement> list = listOfoption.iterator();
+		Set<String> arr = new HashSet<>();
+		while (list.hasNext()) {
+			arr.add(list.next().getText());
+		}
+		if (arr.contains(mes)) {
+			ldriver.findElement(Society).sendKeys(mes);
+		}
+		else {
+			System.out.println("This value is not present in society...");
+		}
 		
-
-
-	}
-
-	public void select_Block() {
-		ldriver.findElement(arcs_Block).click();
-		ldriver.findElement(arcs_Block).click();
-		List<WebElement> listOfoption=ldriver.findElements(By.xpath("//select[@id='block']/option"));
-		System.out.println(listOfoption.size());
-		Iterator<WebElement> list=listOfoption.iterator();
-		String[] arr=new String[listOfoption.size()];
-		int i=0;
-		while(list.hasNext()) {
-			arr[i++]=list.next().getText();	
-		}
-		ldriver.findElement(arcs_Block).sendKeys(arr[1]);
-	}
-
-	public void select_Society() {
-		ldriver.findElement(Society).click();
-		ldriver.findElement(Society).click();
-		List<WebElement> listOfoption=ldriver.findElements(By.xpath("//select[@id='society']/option"));
-		System.out.println(listOfoption.size());
-		Iterator<WebElement> list=listOfoption.iterator();
-		String[] arr=new String[listOfoption.size()];
-		int i=0;
-		while(list.hasNext()) {
-			arr[i++]=list.next().getText();	
-		}
-		ldriver.findElement(Society).sendKeys(arr[1]);
 	}
 
 	public void enter_Number_Of_Verifiered_Farmer(String mes) {
+		ldriver.findElement(By.xpath("//input[@id='lastweek']/parent::div/label")).click();
+		Actions act = new Actions(ldriver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		ldriver.findElement(Number_Of_Verified_Farmer).sendKeys(mes);
+		// js.executeScript("document.getElementById('Number_Of_Verified_Farmer').value(mes);");
 	}
 
 	public void enter_NameOf_PPC(String mes) {
@@ -107,50 +125,75 @@ public class ProcurementOfPaddy {
 	}
 
 	public void enter_QuatityOf_Paddy_Procedure(String mes) {
-	
 		ldriver.findElement(Quantity_Of_Paddy_Produce).sendKeys(mes);
 	}
 
 	public void enter_Quatity_Against_With_Vendor_Vendor_Receipt_Issue(String mes) {
-		
 		ldriver.findElement(Qauntity_Against_Vendor_Issue).sendKeys(mes);
 	}
 
 	public void enter_Quantity_Against_Which_TP_AC_Note_Issued(String mes) {
-		
 		ldriver.findElement(Qauntity_Against_TPORACNOTE_ISSUED).sendKeys(mes);
 	}
 
 	public void enter_Quantity_Against_Which_TP_AC_Note_Not_Issued(String mes) {
 		ldriver.findElement(Quantity_Against_Which_TP_AC_Note_Not_Issued).sendKeys(mes);
-		
 	}
 
-	public void enter_District() {
-		Actions act=new Actions(ldriver);
-		act.moveToElement(ldriver.findElement(District_Division),0,900).build().perform();
-//		select = new Select(ldriver.findElement(District_Division));
-//		select.selectByIndex(1);
+	public void enter_District(String mes) {
 		ldriver.findElement(District_Division).click();
 		ldriver.findElement(District_Division).click();
-		List<WebElement> list_ele=ldriver.findElements(By.xpath("//*[@id='district1']/option"));
-		System.out.println("district size"+list_ele.size());
-		Iterator<WebElement> district=list_ele.iterator();
-		String arr[]=new String[list_ele.size()];
-		int i=0;
-		while(district.hasNext()) {
-			arr[i++]=district.next().getText();
+		List<WebElement> list_ele = ldriver.findElements(By.xpath("//*[@id='district1']/option"));
+		System.out.println("district size" + list_ele.size());
+		Iterator<WebElement> district = list_ele.iterator();
+		Set<String> arr = new HashSet<>();
+		while (district.hasNext()) {
+			arr.add(district.next().getText());
 		}
-		ldriver.findElement(District_Division).sendKeys(arr[2]);
+		if (arr.contains(mes)) {
+			ldriver.findElement(District_Division).sendKeys(mes);
+		}
+		else {
+			System.out.println("This value is not present in society...");
+		}
+
 	}
 
-	public void enter_CirclePacs() {
-		select = new Select(ldriver.findElement(Circle_Pacs));
-		select.selectByIndex(1);
+	public void enter_CirclePacs(String mes) {
+		ldriver.findElement(Circle_Pacs).click();
+		ldriver.findElement(Circle_Pacs).click();
+		List<WebElement> list_ele = ldriver.findElements(By.xpath("//*[@id='arcs1']/option"));
+		System.out.println("circle size" + list_ele.size());
+		Iterator<WebElement> district = list_ele.iterator();
+		Set<String> arr = new HashSet<>();
+		while (district.hasNext()) {
+			arr.add(district.next().getText());
+		}
+		if (arr.contains(mes)) {
+			ldriver.findElement(Circle_Pacs).sendKeys(mes);
+		}
+		else {
+			System.out.println("This value is not present in society...");
+		}
+
 	}
 
-	public void enter_Block() {
-		select = new Select(ldriver.findElement(block));
+	public void enter_Block(String mes) {
+		ldriver.findElement(block).click();
+		ldriver.findElement(block).click();
+		List<WebElement> list_ele = ldriver.findElements(By.xpath("//*[@id='block1']/option"));
+		System.out.println("block size" + list_ele.size());
+		Iterator<WebElement> district = list_ele.iterator();
+		Set<String> arr = new HashSet<>();
+		while (district.hasNext()) {
+			arr.add(district.next().getText());
+		}
+		if (arr.contains(mes)) {
+			ldriver.findElement(block).sendKeys(mes);
+		}
+		else {
+			System.out.println("This value is not present in society...");
+		}
 	}
 
 	public void click_onsubmitbutton() {

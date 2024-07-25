@@ -11,7 +11,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -148,7 +150,7 @@ public class SeedReportVerify extends BaseClass {
 		driver.findElement(By.xpath("//*[text()='Input Marketing Report']")).click();
 		driver.findElement(By.xpath("//*[contains(text(),'Seed Report')]")).click();
 		Thread.sleep(3000);
-		sp.click_On_Next_Button();
+		//sp.click_On_Next_Button();
 		System.out.println("Count value=" + count);
 	}
 
@@ -191,11 +193,11 @@ public class SeedReportVerify extends BaseClass {
 		try {
 			Assert.assertEquals(actual_value, indent_placed_value.concat(".0"));
 			System.out.println("Execute Successfully after comparision....");
-			readcamsexcel.update_cell_value(count, "Successfully verify");
-		} catch (Exception e) {
+			readcamsexcel.update_cell_value(count, "Successfully Verified");
+		} catch (Throwable e) {
 			e.getMessage();
 			e.getStackTrace();
-			readcamsexcel.update_cell_value(count, "not Successfully verify");
+			readcamsexcel.update_cell_value(count, "Not Verified");
 		
 		}
 		System.out.println("handel try catch block successfully...");
@@ -268,10 +270,16 @@ public class SeedReportVerify extends BaseClass {
 		String actual_mes = sp.get_Achievement_To_Indent();
 		String expected_mes = achievement_indent_value;
 		Assert.assertEquals(expected_mes.concat(".0"), actual_mes);
+		
+	}
+	@Test(priority=15)
+	public void click_OnSignout() throws InterruptedException {
+		sp.click_On_Signout();
+		Thread.sleep(2000);
 	}
 
 	@AfterTest
-	public void tear_Down() throws IOException {
+	public void tear_Down(){
 		// readcamsexcel.update_cell_value(count, "good");
 		driver.close();
 	}

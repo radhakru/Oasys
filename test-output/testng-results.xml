@@ -1,92 +1,503 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="1" total="43" passed="42" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-20T19:27:10 IST" name="Suite" finished-at="2024-07-20T19:27:25 IST" duration-ms="14796">
+  <suite started-at="2024-07-25T17:37:26 IST" name="Suite" finished-at="2024-07-25T17:38:44 IST" duration-ms="77554">
     <groups>
     </groups>
-    <test started-at="2024-07-20T19:27:10 IST" name="OasysDataCAMS" finished-at="2024-07-20T19:27:25 IST" duration-ms="14796">
-      <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9]" started-at="2024-07-20T19:27:10 IST" name="setUp" finished-at="2024-07-20T19:27:12 IST" duration-ms="2023" status="PASS">
+    <test started-at="2024-07-25T17:37:26 IST" name="OasysDataCAMS" finished-at="2024-07-25T17:38:44 IST" duration-ms="77554">
+      <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:37:26 IST" name="setUp" finished-at="2024-07-25T17:37:27 IST" duration-ms="1202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="click_on_login()[pri:1, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9]" started-at="2024-07-20T19:27:12 IST" name="click_on_login" finished-at="2024-07-20T19:27:15 IST" duration-ms="3509" status="PASS">
+        <test-method signature="click_on_login()[pri:1, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:27 IST" name="click_on_login" finished-at="2024-07-25T17:38:30 IST" duration-ms="3226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- click_on_login -->
-        <test-method signature="submit_Paddy_Form_Page()[pri:2, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9]" started-at="2024-07-20T19:27:16 IST" name="submit_Paddy_Form_Page" finished-at="2024-07-20T19:27:24 IST" duration-ms="8635" status="FAIL">
-          <exception class="org.openqa.selenium.interactions.MoveTargetOutOfBoundsException">
-            <message>
-              <![CDATA[move target out of bounds
-  (Session info: chrome=126.0.6478.128)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'OASYS-LAP-146', ip: '192.168.6.161', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2146d21b2810bff0ee2a614e4ada63e8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: move target out of bounds
-  (Session info: chrome=126.0.6478.128)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'OASYS-LAP-146', ip: '192.168.6.161', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2146d21b2810bff0ee2a614e4ada63e8
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-at CamsOasys.Cams_Marketing_Object_page.ProcurementOfPaddy.enter_District(ProcurementOfPaddy.java:131)
-at CamsOasys.Cams_Marketing_Testing.PaddyReportVerify.submit_Paddy_Form_Page(PaddyReportVerify.java:102)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.interactions.MoveTargetOutOfBoundsException -->
+        <test-method signature="submit_Non_Paddy_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:31 IST" name="submit_Non_Paddy_Page" data-provider="test" finished-at="2024-07-25T17:38:37 IST" duration-ms="6399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin194@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cams@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ganjam]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Berhampur]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Digapahandi]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Bomakai]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Rama]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[100.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submit_Non_Paddy_Page -->
+        <test-method signature="verify_Non_Paddy()[pri:3, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:37 IST" name="verify_Non_Paddy" finished-at="2024-07-25T17:38:38 IST" duration-ms="1032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Non_Paddy -->
+        <test-method signature="verify_circle()[pri:4, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:38 IST" name="verify_circle" finished-at="2024-07-25T17:38:38 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_circle -->
+        <test-method signature="verify_block()[pri:5, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:38 IST" name="verify_block" finished-at="2024-07-25T17:38:38 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_block -->
+        <test-method signature="verify_society()[pri:6, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:38 IST" name="verify_society" finished-at="2024-07-25T17:38:38 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_society -->
+        <test-method signature="verify_Farmer_Verify()[pri:7, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Farmer_Verify" finished-at="2024-07-25T17:38:39 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Farmer_Verify -->
+        <test-method signature="verify_ppc()[pri:8, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_ppc" finished-at="2024-07-25T17:38:39 IST" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_ppc -->
+        <test-method signature="verify_Sold_Paddy()[pri:9, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Sold_Paddy" finished-at="2024-07-25T17:38:39 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Sold_Paddy -->
+        <test-method signature="verify_Paddy_Procedure()[pri:10, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Paddy_Procedure" finished-at="2024-07-25T17:38:39 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Paddy_Procedure -->
+        <test-method signature="verify_Receipt_Issue()[pri:11, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Receipt_Issue" finished-at="2024-07-25T17:38:39 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Receipt_Issue -->
+        <test-method signature="verify_Note_Issue()[pri:12, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Note_Issue" finished-at="2024-07-25T17:38:39 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Note_Issue -->
+        <test-method signature="verify_Note_Not_Issue()[pri:13, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:39 IST" name="verify_Note_Not_Issue" finished-at="2024-07-25T17:38:40 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Note_Not_Issue -->
+        <test-method signature="click_on_signout()[pri:14, instance:CamsOasys.Cams_Marketing_Testing.NonPaddyverify@2d29b4ee]" started-at="2024-07-25T17:38:40 IST" name="click_on_signout" finished-at="2024-07-25T17:38:43 IST" duration-ms="3616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_signout -->
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.NonPaddyverify -->
+      <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:27 IST" name="setUp" finished-at="2024-07-25T17:37:29 IST" duration-ms="2142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="click_on_login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:30 IST" name="click_on_login" data-provider="test" finished-at="2024-07-25T17:37:34 IST" duration-ms="3798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin194@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cams@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ganjam]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[155.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[50.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_login -->
+        <test-method signature="submit_Sell_Of_Seed_Data(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:35 IST" name="submit_Sell_Of_Seed_Data" data-provider="test" finished-at="2024-07-25T17:37:40 IST" duration-ms="5306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin194@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cams@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ganjam]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[155.0]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[50.0]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submit_Sell_Of_Seed_Data -->
+        <test-method signature="only_verify_seeds()[pri:3, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:40 IST" name="only_verify_seeds" finished-at="2024-07-25T17:37:44 IST" duration-ms="3882" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- only_verify_seeds -->
+        <test-method signature="verify_Districtname_From_Sale_Of_Seed_ReportPage()[pri:4, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:44 IST" name="verify_Districtname_From_Sale_Of_Seed_ReportPage" finished-at="2024-07-25T17:37:46 IST" duration-ms="2140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Districtname_From_Sale_Of_Seed_ReportPage -->
+        <test-method signature="verify_Pacsname_Form_Sale_Of_SeedReportPage()[pri:5, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:46 IST" name="verify_Pacsname_Form_Sale_Of_SeedReportPage" finished-at="2024-07-25T17:37:48 IST" duration-ms="2084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Pacsname_Form_Sale_Of_SeedReportPage -->
+        <test-method signature="verify_Indent_Of_Ossc_Value()[pri:6, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:48 IST" name="verify_Indent_Of_Ossc_Value" finished-at="2024-07-25T17:37:48 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Indent_Of_Ossc_Value -->
+        <test-method signature="verify_Lifted_Value()[pri:7, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_Lifted_Value" finished-at="2024-07-25T17:37:49 IST" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Lifted_Value -->
+        <test-method signature="verify_LastWeek_Value()[pri:9, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_LastWeek_Value" finished-at="2024-07-25T17:37:49 IST" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_LastWeek_Value -->
+        <test-method signature="verify_Cashsale_Value()[pri:10, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_Cashsale_Value" finished-at="2024-07-25T17:37:49 IST" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Cashsale_Value -->
+        <test-method signature="verify_BComponent_Value()[pri:11, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_BComponent_Value" finished-at="2024-07-25T17:37:49 IST" duration-ms="79" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_BComponent_Value -->
+        <test-method signature="verify_Total_Value()[pri:12, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_Total_Value" finished-at="2024-07-25T17:37:49 IST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Total_Value -->
+        <test-method signature="verify_Balanace_With_Pacs_Lampcs()[pri:13, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_Balanace_With_Pacs_Lampcs" finished-at="2024-07-25T17:37:49 IST" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Balanace_With_Pacs_Lampcs -->
+        <test-method signature="verify_Achievement_To_Indent()[pri:14, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:49 IST" name="verify_Achievement_To_Indent" finished-at="2024-07-25T17:37:49 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Achievement_To_Indent -->
+        <test-method signature="click_OnSignout()[pri:15, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:37:50 IST" name="click_OnSignout" finished-at="2024-07-25T17:37:56 IST" duration-ms="6410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_OnSignout -->
+        <test-method is-config="true" signature="tear_Down()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.SeedReportVerify@45385f75]" started-at="2024-07-25T17:38:43 IST" name="tear_Down" finished-at="2024-07-25T17:38:44 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.SeedReportVerify -->
+      <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:37:27 IST" name="setUp" finished-at="2024-07-25T17:37:27 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="click_on_login()[pri:1, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:37:56 IST" name="click_on_login" finished-at="2024-07-25T17:37:59 IST" duration-ms="3476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_on_login -->
+        <test-method signature="submit_Paddy_Form_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:00 IST" name="submit_Paddy_Form_Page" data-provider="test" finished-at="2024-07-25T17:38:19 IST" duration-ms="19669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhayapur SCS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin194@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cams@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ganjam]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Berhampur]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Chikiti]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Kotilingi]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[240.0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Rama]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[200.0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[200.0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[200.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[200.0]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[CUTTACK]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Jagatsinghpur]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Niali]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submit_Paddy_Form_Page -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@7fb4f2a9]" started-at="2024-07-20T19:27:24 IST" name="tearDown" finished-at="2024-07-20T19:27:25 IST" duration-ms="114" status="PASS">
+        <test-method signature="verify_PeddyReport()[pri:3, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:19 IST" name="verify_PeddyReport" finished-at="2024-07-25T17:38:21 IST" duration-ms="1470" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- verify_PeddyReport -->
+        <test-method signature="verify_No_Of_Farmer_verified()[pri:4, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:21 IST" name="verify_No_Of_Farmer_verified" finished-at="2024-07-25T17:38:21 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_No_Of_Farmer_verified -->
+        <test-method signature="verify_Name_Of_PPC()[pri:5, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:21 IST" name="verify_Name_Of_PPC" finished-at="2024-07-25T17:38:21 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Name_Of_PPC -->
+        <test-method signature="verify_Farmer_Sold_Paddy()[pri:6, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_Farmer_Sold_Paddy" finished-at="2024-07-25T17:38:22 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Farmer_Sold_Paddy -->
+        <test-method signature="verify_Paddy_Procedure()[pri:7, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_Paddy_Procedure" finished-at="2024-07-25T17:38:22 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Paddy_Procedure -->
+        <test-method signature="verify_Vendor_Receipt_Issue()[pri:8, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_Vendor_Receipt_Issue" finished-at="2024-07-25T17:38:22 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Vendor_Receipt_Issue -->
+        <test-method signature="verify_Quantity_Against_Which_TP_AC_Note_Issued()[pri:9, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_Quantity_Against_Which_TP_AC_Note_Issued" finished-at="2024-07-25T17:38:22 IST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Quantity_Against_Which_TP_AC_Note_Issued -->
+        <test-method signature="verify_Quantity_Against_Which_TP_AC_Note_Not_Issued()[pri:10, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_Quantity_Against_Which_TP_AC_Note_Not_Issued" finished-at="2024-07-25T17:38:22 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Quantity_Against_Which_TP_AC_Note_Not_Issued -->
+        <test-method signature="verify_District_value()[pri:11, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:22 IST" name="verify_District_value" finished-at="2024-07-25T17:38:22 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_District_value -->
+        <test-method signature="verify_Circle_Value()[pri:12, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:23 IST" name="verify_Circle_Value" finished-at="2024-07-25T17:38:23 IST" duration-ms="123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Circle_Value -->
+        <test-method signature="verify_Block_Value()[pri:13, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:23 IST" name="verify_Block_Value" finished-at="2024-07-25T17:38:23 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Block_Value -->
+        <test-method signature="click_On_Signout()[pri:14, instance:CamsOasys.Cams_Marketing_Testing.PaddyReportVerify@49c90a9c]" started-at="2024-07-25T17:38:23 IST" name="click_On_Signout" finished-at="2024-07-25T17:38:27 IST" duration-ms="4156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_On_Signout -->
       </class> <!-- CamsOasys.Cams_Marketing_Testing.PaddyReportVerify -->
     </test> <!-- OasysDataCAMS -->
   </suite> <!-- Suite -->

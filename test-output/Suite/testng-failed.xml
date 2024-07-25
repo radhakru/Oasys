@@ -9,8 +9,8 @@
       <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="submit_Paddy_Form_Page"/>
+          <include name="verify_Block_Value"/>
+          <include name="verify_Circle_Value"/>
         </methods>
       </class> <!-- CamsOasys.Cams_Marketing_Testing.PaddyReportVerify -->
     </classes>

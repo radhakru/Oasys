@@ -23,22 +23,25 @@ public class PaddyReport {
 		PageFactory.initElements(rdriver, this);
 	}
 
-	private By pagination = By.xpath("//*[@id='listPaddyReport_next']/a[text()='Next']");
-	private By circle_arcs = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[3]");
-	private By block = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[4]");
-	private By no_of_Farmer = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[5]");
-	private By name_Of_PPC = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[6]");
-	private By name_Of_Farmer_Sell_Paddy = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[7]");
-	private By quantity_Of_Paddy_Procedure = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[8]");
+	//private By pagination = By.xpath("//*[@id='listPaddyReport_next']/a[text()='Next']");
+	private By circle_arcs = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[3]");
+	private By block = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[4]");
+	private By no_of_Farmer = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[5]");
+	private By name_Of_PPC = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[6]");
+	private By name_Of_Farmer_Sell_Paddy = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[7]");
+	private By quantity_Of_Paddy_Procedure = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[8]");
 	private By quntity_Of_Which_Vendor_Receipt_Issue = By
-			.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[9]");
-	private By quantity_Against_Which_Note_Issue = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[10]");
+			.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[9]");
+	private By quantity_Against_Which_Note_Issue = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[10]");
 	private By quantity_Against_Which_Note_Not_Issue = By
-			.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[11]");
-	private By district_Divison = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[12]");
-	private By circle_Arcs = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[13]");
-	private By blockBy = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[last()]/td[14]");
-	private By last_Page=By.xpath("//ul[@class='pagination']/li[last()-1]");
+			.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[11]");
+	private By district_Divison = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[12]");
+	private By circle_Arcs = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[13]");
+	private By blockBy = By.xpath("(//table[@id='listPaddyReport']/tbody/tr)[1]/td[14]");
+	//private By last_Page = By.xpath("//ul[@class='pagination']/li[last()-1]");
+	private By profilel_page = By.xpath("//button[@id='page-header-user-dropdown']");
+	private By signout = By.xpath("//button[@id='page-header-user-dropdown']/following-sibling::div/a[3]");
+
 
 	public WebDriverWait createInstanceOfWait() {
 		wait = new WebDriverWait(ldriver, 120);
@@ -93,44 +96,56 @@ public class PaddyReport {
 		String mes = ldriver.findElement(quntity_Of_Which_Vendor_Receipt_Issue).getText();
 		return mes;
 	}
+
 	public String get_enter_Quantity_Against_Which_TP_AC_Note_Issued() {
-		wait=createInstanceOfWait();
+		wait = createInstanceOfWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(quantity_Against_Which_Note_Issue));
-		String mes=ldriver.findElement(quantity_Against_Which_Note_Issue).getText();
+		String mes = ldriver.findElement(quantity_Against_Which_Note_Issue).getText();
 		return mes;
 	}
 
 	public String get_enter_Quantity_Against_Which_TP_AC_Note_Not_Issued() {
-		wait=createInstanceOfWait();
+		wait = createInstanceOfWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(quantity_Against_Which_Note_Not_Issue));
-		String mes=ldriver.findElement(quantity_Against_Which_Note_Not_Issue).getText();
+		String mes = ldriver.findElement(quantity_Against_Which_Note_Not_Issue).getText();
 		return mes;
 	}
+
 	public String get_District_Divison() {
-		wait=createInstanceOfWait();
+		wait = createInstanceOfWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(district_Divison));
-		String mes=ldriver.findElement(district_Divison).getText();
+		String mes = ldriver.findElement(district_Divison).getText();
 		return mes;
 	}
+
 	public String get_Circle_Arcs() {
-		wait=createInstanceOfWait();
+		wait = createInstanceOfWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(circle_Arcs));
-		String mes=ldriver.findElement(circle_Arcs).getText();
+		String mes = ldriver.findElement(circle_Arcs).getText();
 		return mes;
 	}
+
 	public String get_Block() {
-		wait=createInstanceOfWait();
+		wait = createInstanceOfWait();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(blockBy));
-		String mes=ldriver.findElement(blockBy).getText();
+		String mes = ldriver.findElement(blockBy).getText();
 		return mes;
 	}
 	
-	public void click_On_Next_Button() {
-			Actions act=new Actions(ldriver);
-			act.sendKeys(Keys.PAGE_DOWN).build().perform();
-			System.out.println(ldriver.findElement(last_Page).isDisplayed());
-			ldriver.findElement(last_Page).click();
-		
+	public void click_On_ProfilePage() {
+		ldriver.findElement(profilel_page).click();
 	}
-	
+	public void click_On_SignOut() {
+		ldriver.findElement(signout).click();
+	}
+
+//	public void click_On_Next_Button() {
+//		ldriver.findElement(By.xpath("//div[@id='listPaddyReport_filter']/label")).click();
+//		Actions act = new Actions(ldriver);
+//		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+//		System.out.println(ldriver.findElement(last_Page).isDisplayed());
+//		ldriver.findElement(last_Page).click();
+//
+//	}
+
 }

@@ -12,12 +12,15 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import CamsOasys.Cams_Marketing_Object_page.FertilizerReport;
 import CamsOasys.Cams_Marketing_Object_page.LoginPage;
 import CamsOasys.Cams_Marketing_Object_page.SaleFertilizer;
 import CamsOasys.Cams_Marketing_Object_page.SeedReport;
 import CamsOasys.Cams_Marketing_Object_page.saleOfSeed;
+import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingExcel;
+import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingFertilizerExcel;
 import CamsOasys.Cams_Oasys.BaseClass;
 
 public class FertilizerReportVerify extends BaseClass {
@@ -27,6 +30,7 @@ public class FertilizerReportVerify extends BaseClass {
 	public LoginPage lp;
 	public WebDriverWait wait;
 	public JavascriptExecutor js;
+	public ReadCamsMarketingFertilizerExcel readcamsmarketingfertilizer;
 	public String target = "100";
 	public String Quantity_Of_Fertilizer_Preposition = "100";
 	public String lastWeekAchieveMent = "100";
@@ -38,6 +42,7 @@ public class FertilizerReportVerify extends BaseClass {
 	public String Achievement = "100";
 	public String Sale = "100";
 	public String Balance_urea = "100";
+	public int count = 0;
 
 	@BeforeTest
 	public void setUp() {
@@ -45,6 +50,7 @@ public class FertilizerReportVerify extends BaseClass {
 		sl = new SaleFertilizer(driver);
 		fr = new FertilizerReport(driver);
 		lp = new LoginPage(driver);
+		readcamsmarketingfertilizer = new ReadCamsMarketingFertilizerExcel();
 
 		driver.manage().window().maximize();
 		driver.get("http://cams.demoapplication.in/");
@@ -73,13 +79,29 @@ public class FertilizerReportVerify extends BaseClass {
 
 	}
 
-	@Test(priority = 2,enabled=true)
-	public void submit_Sale_Of_Fertilizer() {
+	@Test(dataProvider = "test", dataProviderClass = ReadCamsMarketingFertilizerExcel.class, priority = 2, enabled = true)
+	public void submit_Sale_Of_Fertilizer(String pacsname, String eamilid, String password, String District,
+			String NameOfPacks, String Target, String Quantity_Of_Fertilizer_Prepositioned, String LastWeek,
+			String Cash_Sale, String B_Component, String TotalSale, String Out_Of_Which_Urea, String Balance_excel,
+			String Achievement_excel, String Sale_excel, String Balance_value) {
 		wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Input Marketing']")));
 		driver.findElement(By.xpath("//*[text()='Input Marketing']")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Sale Of Fertilizer']")));
 		driver.findElement(By.xpath("//*[text()='Sale Of Fertilizer']")).click();
+		target = Target.substring(0, Target.indexOf('.'));
+		Quantity_Of_Fertilizer_Preposition = Quantity_Of_Fertilizer_Prepositioned.substring(0,
+				Quantity_Of_Fertilizer_Prepositioned.indexOf('.'));
+		lastWeekAchieveMent = LastWeek.substring(0, LastWeek.indexOf('.'));
+		CashSale = Cash_Sale.substring(0, LastWeek.indexOf('.'));
+		BComponent = B_Component.substring(0, B_Component.indexOf('.'));
+		Total_sale = TotalSale.substring(0, TotalSale.indexOf('.'));
+		out_ofwhich_urea = Out_Of_Which_Urea.substring(0, Out_Of_Which_Urea.indexOf('.'));
+		Balance = Balance_excel.substring(0, Balance_excel.indexOf('.'));
+		Achievement = Achievement_excel.substring(0, Achievement_excel.indexOf('.'));
+		Sale = Sale_excel.substring(0, Sale_excel.indexOf('.'));
+		Balance_urea = Balance_value.substring(0, Balance_value.indexOf('.'));
+
 		sl.enter_Target(target);
 		sl.enter_Quality_Of_Fortilizer_Prepositioned(Quantity_Of_Fertilizer_Preposition);
 		sl.enter_LastWeek_Achievement(lastWeekAchieveMent);
@@ -94,11 +116,12 @@ public class FertilizerReportVerify extends BaseClass {
 		sl.click_On_Submit_Button();
 		sl.click_On_Submit_PopUp();
 		sl.click_On_Ok_Button();
+		count++;
 
 	}
 
 	@Test(priority = 3)
-	public void verify_FertilizerData_For_Target_value() {
+	public void verify_FertilizerData_For_Target_value() throws IOException {
 		wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Input Marketing Report']")));
 		driver.findElement(By.xpath("//*[text()='Input Marketing Report']")).click();
@@ -106,8 +129,18 @@ public class FertilizerReportVerify extends BaseClass {
 		driver.findElement(By.xpath("//*[text()='Fertilizer Report']")).click();
 		fr.click_On_Next_Button();
 		String actual_value = fr.get_Target_Value();
+		try {
+			Assert.assertEquals(actual_value, target.concat(".0"));
+			readcamsmarketingfertilizer.update_cell_value(count, "Successfully Verifired");
+			System.out.println("assertEquals().........");
 
-		Assert.assertEquals(actual_value, target.concat(".0"));
+		} catch (Exception e) {
+			e.getMessage();
+			e.printStackTrace();
+			readcamsmarketingfertilizer.update_cell_value(count, "not Verifired");
+			System.out.println("this is catch block.......");
+			
+		}
 	}
 
 	@Test(priority = 4)

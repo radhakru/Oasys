@@ -139,6 +139,7 @@ public class FertilizerReport {
 	}
 
 	public void click_On_Next_Button() {
+		ldriver.findElement(By.xpath("//div[@id='listNonPaddyReport_filter']/label")).click();
 		Actions act = new Actions(ldriver);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		System.out.println(ldriver.findElement(last_Page).isDisplayed());
