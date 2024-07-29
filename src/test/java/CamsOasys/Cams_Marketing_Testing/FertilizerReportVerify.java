@@ -62,8 +62,8 @@ public class FertilizerReportVerify extends BaseClass {
 	public void click_on_login() throws IOException {
 		System.out.println("Url site before click on login button...." + driver.getCurrentUrl());
 		lp.click_On_Login_Dashboard();
-//		wait=new WebDriverWait(driver,10);
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
+		wait=new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
 		lp.enter_Username_Field("admin194@gmail.com");
 		lp.enter_Password_Field("Cams@1234");
 		ScreenCapture.passScreenCapture();
@@ -127,7 +127,7 @@ public class FertilizerReportVerify extends BaseClass {
 		driver.findElement(By.xpath("//*[text()='Input Marketing Report']")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Fertilizer Report']")));
 		driver.findElement(By.xpath("//*[text()='Fertilizer Report']")).click();
-		fr.click_On_Next_Button();
+		//fr.click_On_Next_Button();
 		String actual_value = fr.get_Target_Value();
 		try {
 			Assert.assertEquals(actual_value, target.concat(".0"));

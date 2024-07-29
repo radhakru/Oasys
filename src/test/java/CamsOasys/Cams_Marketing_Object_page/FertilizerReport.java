@@ -22,22 +22,22 @@ public class FertilizerReport {
 		PageFactory.initElements(rdriver, this);
 	}
 
-	private By districtValue = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[2]");
-	private By nameOfPacsName = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[3]");
-	private By Target = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[4]");
-	private By Quanti_Of_Fortilizer_pos = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[5]");
-	private By LastWeek = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[6]");
-	private By Cashsale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[7]");
-	private By BComponent = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[8]");
-	private By TotalSale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[9]");
-	private By Out_Of_Which_Urea = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[10]");
-	private By Balance = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[11]");
-	private By Achievement = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[12]");
-	private By Sale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[13]");
-	private By Balance_Urea = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[last()]/td[14]");
-	private By pagination_Value = By.xpath("//li[@id='fertilizer_report_next']/a");
-	private By next_button = By.xpath("//*[@id='fertilizer_report_next']/a");
-	private By last_Page = By.xpath("//ul[@class='pagination']/li[last()-1]");
+	private By districtValue = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[2]");
+	private By nameOfPacsName = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[3]");
+	private By Target = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[4]");
+	private By Quanti_Of_Fortilizer_pos = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[5]");
+	private By LastWeek = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[6]");
+	private By Cashsale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[7]");
+	private By BComponent = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[8]");
+	private By TotalSale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[9]");
+	private By Out_Of_Which_Urea = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[10]");
+	private By Balance = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[11]");
+	private By Achievement = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[12]");
+	private By Sale = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[13]");
+	private By Balance_Urea = By.xpath("(//table[@id='fertilizer_report']/tbody/tr)[1]/td[14]");
+//	private By pagination_Value = By.xpath("//li[@id='fertilizer_report_next']/a");
+//	private By next_button = By.xpath("//*[@id='fertilizer_report_next']/a");
+//	private By last_Page = By.xpath("//ul[@class='pagination']/li[last()-1]");
 
 	public WebDriverWait createWaitInstance() {
 		wait = new WebDriverWait(ldriver, 120);
@@ -138,12 +138,12 @@ public class FertilizerReport {
 		return mes;
 	}
 
-	public void click_On_Next_Button() {
-		ldriver.findElement(By.xpath("//div[@id='listNonPaddyReport_filter']/label")).click();
-		Actions act = new Actions(ldriver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		System.out.println(ldriver.findElement(last_Page).isDisplayed());
-		ldriver.findElement(last_Page).click();
-	}
-
+	/*
+	 * public void click_On_Next_Button() {
+	 * ldriver.findElement(By.xpath("//div[@id='listNonPaddyReport_filter']/label"))
+	 * .click(); Actions act = new Actions(ldriver);
+	 * act.sendKeys(Keys.PAGE_DOWN).build().perform();
+	 * System.out.println(ldriver.findElement(last_Page).isDisplayed());
+	 * ldriver.findElement(last_Page).click(); }
+	 */
 }

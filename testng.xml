@@ -7,10 +7,14 @@
   <test name="OasysDataCAMS">
     <classes>
          <!--  <class name="CamsOasys.Cams_Oasys.CamsEntry"/>-->
-            <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/>
-         <!--   <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/>-->
-              <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>
-            <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/>
+             <!--  <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/>-->
+          <!--  <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/>-->
+             <!--  <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>-->
+             <!-- <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/>-->
+            
+            <!-- verify validation message for sale of seed -->
+             <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed"/>
+            
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
