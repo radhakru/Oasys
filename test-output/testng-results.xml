@@ -1,89 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="24" passed="23" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-29T10:36:19 IST" name="Suite" finished-at="2024-07-29T10:36:40 IST" duration-ms="21371">
+  <suite started-at="2024-07-30T10:53:07 IST" name="Suite" finished-at="2024-07-30T10:54:11 IST" duration-ms="64362">
     <groups>
     </groups>
-    <test started-at="2024-07-29T10:36:19 IST" name="OasysDataCAMS" finished-at="2024-07-29T10:36:40 IST" duration-ms="21371">
-      <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:19 IST" name="setUp" finished-at="2024-07-29T10:36:20 IST" duration-ms="1369" status="PASS">
+    <test started-at="2024-07-30T10:53:07 IST" name="OasysDataCAMS" finished-at="2024-07-30T10:54:11 IST" duration-ms="64362">
+      <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:07 IST" name="setUp" finished-at="2024-07-30T10:53:09 IST" duration-ms="1891" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="click_On_Login()[pri:1, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:20 IST" name="click_On_Login" finished-at="2024-07-29T10:36:29 IST" duration-ms="8437" status="PASS">
+        <test-method signature="landing_On_The_Marketing_Page()[pri:1, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:09 IST" name="landing_On_The_Marketing_Page" finished-at="2024-07-30T10:53:11 IST" duration-ms="2715" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- click_On_Login -->
-        <test-method signature="check_Validation_Indent_Placed_To_OSSC()[pri:2, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:30 IST" name="check_Validation_Indent_Placed_To_OSSC" finished-at="2024-07-29T10:36:31 IST" duration-ms="1127" status="PASS">
+        </test-method> <!-- landing_On_The_Marketing_Page -->
+        <test-method signature="click_On_Fortilizer_Page()[pri:2, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:12 IST" name="click_On_Fortilizer_Page" finished-at="2024-07-30T10:53:16 IST" duration-ms="4184" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Indent_Placed_To_OSSC -->
-        <test-method signature="check_Validation_Indent_Placed_To_OSSC_Delete_Value()[pri:3, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:31 IST" name="check_Validation_Indent_Placed_To_OSSC_Delete_Value" finished-at="2024-07-29T10:36:34 IST" duration-ms="2384" status="PASS">
+        </test-method> <!-- click_On_Fortilizer_Page -->
+        <test-method signature="check_Validation_Message_For_TargetField()[pri:3, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:16 IST" name="check_Validation_Message_For_TargetField" finished-at="2024-07-30T10:53:20 IST" duration-ms="4415" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Indent_Placed_To_OSSC_Delete_Value -->
-        <test-method signature="check_Validation_Leafed_Value()[pri:4, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:34 IST" name="check_Validation_Leafed_Value" finished-at="2024-07-29T10:36:34 IST" duration-ms="359" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_TargetField -->
+        <test-method signature="check_Validation_Message_For_Target_Delete_Value()[pri:4, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:21 IST" name="check_Validation_Message_For_Target_Delete_Value" finished-at="2024-07-30T10:53:23 IST" duration-ms="2347" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Leafed_Value -->
-        <test-method signature="check_Validation_Leafed_Delete_Value()[pri:5, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:34 IST" name="check_Validation_Leafed_Delete_Value" finished-at="2024-07-29T10:36:35 IST" duration-ms="339" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Target_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Quantity_Of_Fertilizer()[pri:5, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:23 IST" name="check_Validation_Message_For_Quantity_Of_Fertilizer" finished-at="2024-07-30T10:53:25 IST" duration-ms="2242" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Leafed_Delete_Value -->
-        <test-method signature="check_Validation_LastWeek()[pri:6, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:35 IST" name="check_Validation_LastWeek" finished-at="2024-07-29T10:36:35 IST" duration-ms="223" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Quantity_Of_Fertilizer -->
+        <test-method signature="check_Validation_Message_For_Quantity_Of_Fortilizer_Delete_Value()[pri:6, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:25 IST" name="check_Validation_Message_For_Quantity_Of_Fortilizer_Delete_Value" finished-at="2024-07-30T10:53:28 IST" duration-ms="2296" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_LastWeek -->
-        <test-method signature="check_Validation_LastWeek_Deleted_Value()[pri:7, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:35 IST" name="check_Validation_LastWeek_Deleted_Value" finished-at="2024-07-29T10:36:36 IST" duration-ms="409" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Quantity_Of_Fortilizer_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_LastWeek_Achievement()[pri:7, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:28 IST" name="check_Validation_Message_For_LastWeek_Achievement" finished-at="2024-07-30T10:53:30 IST" duration-ms="2318" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_LastWeek_Deleted_Value -->
-        <test-method signature="check_Validation_CashSale_Value()[pri:8, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:36 IST" name="check_Validation_CashSale_Value" finished-at="2024-07-29T10:36:36 IST" duration-ms="212" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_LastWeek_Achievement -->
+        <test-method signature="check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value()[pri:8, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:30 IST" name="check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value" finished-at="2024-07-30T10:53:32 IST" duration-ms="2297" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_CashSale_Value -->
-        <test-method signature="check_Validation_CashSale_Delete_Value()[pri:9, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:36 IST" name="check_Validation_CashSale_Delete_Value" finished-at="2024-07-29T10:36:37 IST" duration-ms="277" status="PASS">
+        </test-method> <!-- check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_CashSale()[pri:9, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:32 IST" name="check_Validation_Message_For_CashSale" finished-at="2024-07-30T10:53:35 IST" duration-ms="2254" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='cash-sale']/following-sibling::label"}
+  (Session info: chrome=126.0.6478.185)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'OASYS-LAP-146', ip: '192.168.6.161', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e6a854fe9c4cee76b039cbed3eadf598
+*** Element info: {Using=xpath, value=//input[@id='cash-sale']/following-sibling::label}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='cash-sale']/following-sibling::label"}
+  (Session info: chrome=126.0.6478.185)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'OASYS-LAP-146', ip: '192.168.6.161', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.185, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\nirak\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e6a854fe9c4cee76b039cbed3eadf598
+*** Element info: {Using=xpath, value=//input[@id='cash-sale']/following-sibling::label}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage.check_Validation_Message_For_CashSale(ValidationMessageForFertilizerpage.java:186)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_CashSale_Delete_Value -->
-        <test-method signature="check_Validation_BComponent()[pri:10, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:37 IST" name="check_Validation_BComponent" finished-at="2024-07-29T10:36:37 IST" duration-ms="301" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_CashSale -->
+        <test-method signature="check_Validation_Message_For_CashSale_Delete_Value()[pri:10, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:35 IST" name="check_Validation_Message_For_CashSale_Delete_Value" finished-at="2024-07-30T10:53:37 IST" duration-ms="2292" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_BComponent -->
-        <test-method signature="check_Validation_Bcomponent_Delete_Value()[pri:11, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:37 IST" name="check_Validation_Bcomponent_Delete_Value" finished-at="2024-07-29T10:36:38 IST" duration-ms="300" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_CashSale_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Bcomponent()[pri:11, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:37 IST" name="check_Validation_Message_For_Bcomponent" finished-at="2024-07-30T10:53:39 IST" duration-ms="2310" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Bcomponent_Delete_Value -->
-        <test-method signature="check_Validation_Total()[pri:12, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:38 IST" name="check_Validation_Total" finished-at="2024-07-29T10:36:38 IST" duration-ms="268" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Bcomponent -->
+        <test-method signature="check_Validation_Message_For_Bcomponent_Delete_Value()[pri:12, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:39 IST" name="check_Validation_Message_For_Bcomponent_Delete_Value" finished-at="2024-07-30T10:53:42 IST" duration-ms="2362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Total -->
-        <test-method signature="check_Validtaion_Total_Delete_Value()[pri:13, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:38 IST" name="check_Validtaion_Total_Delete_Value" finished-at="2024-07-29T10:36:38 IST" duration-ms="245" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Bcomponent_Delete_Value -->
+        <test-method signature="check_validation_Message_For_TotalSale()[pri:13, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:42 IST" name="check_validation_Message_For_TotalSale" finished-at="2024-07-30T10:53:44 IST" duration-ms="2323" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validtaion_Total_Delete_Value -->
-        <test-method signature="check_Validation_Balance_PACS_LAMPCS()[pri:14, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:38 IST" name="check_Validation_Balance_PACS_LAMPCS" finished-at="2024-07-29T10:36:39 IST" duration-ms="320" status="PASS">
+        </test-method> <!-- check_validation_Message_For_TotalSale -->
+        <test-method signature="check_Validation_Message_For_TotalSale()[pri:14, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:44 IST" name="check_Validation_Message_For_TotalSale" finished-at="2024-07-30T10:53:46 IST" duration-ms="2319" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Balance_PACS_LAMPCS -->
-        <test-method signature="check_Validation_Balance_PACS_LAMPS_Delete_Value()[pri:15, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:39 IST" name="check_Validation_Balance_PACS_LAMPS_Delete_Value" finished-at="2024-07-29T10:36:39 IST" duration-ms="276" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_TotalSale -->
+        <test-method signature="check_Validation_Message_For_Out_Of_Which_Urea()[pri:15, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:47 IST" name="check_Validation_Message_For_Out_Of_Which_Urea" finished-at="2024-07-30T10:53:49 IST" duration-ms="2422" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Balance_PACS_LAMPS_Delete_Value -->
-        <test-method signature="check_Validation_Achievement_To_Indent()[pri:16, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:39 IST" name="check_Validation_Achievement_To_Indent" finished-at="2024-07-29T10:36:39 IST" duration-ms="301" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Out_Of_Which_Urea -->
+        <test-method signature="check_Validation_Message_For_Out_Of_Which_Urea_Delete_Value()[pri:16, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:49 IST" name="check_Validation_Message_For_Out_Of_Which_Urea_Delete_Value" finished-at="2024-07-30T10:53:51 IST" duration-ms="2401" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Achievement_To_Indent -->
-        <test-method signature="check_Validation_Achievement_To_Indent_Delete_Value()[pri:17, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:40 IST" name="check_Validation_Achievement_To_Indent_Delete_Value" finished-at="2024-07-29T10:36:40 IST" duration-ms="242" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Out_Of_Which_Urea_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Balance()[pri:17, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:51 IST" name="check_Validation_Message_For_Balance" finished-at="2024-07-30T10:53:54 IST" duration-ms="2321" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- check_Validation_Achievement_To_Indent_Delete_Value -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed@5dafbe45]" started-at="2024-07-29T10:36:40 IST" name="tearDown" finished-at="2024-07-29T10:36:40 IST" duration-ms="108" status="PASS">
+        </test-method> <!-- check_Validation_Message_For_Balance -->
+        <test-method signature="check_Validation_Message_For_Balance_Delete_Value()[pri:18, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:54 IST" name="check_Validation_Message_For_Balance_Delete_Value" finished-at="2024-07-30T10:53:56 IST" duration-ms="2526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Balance_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Achievement()[pri:19, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:56 IST" name="check_Validation_Message_For_Achievement" finished-at="2024-07-30T10:53:59 IST" duration-ms="2328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Achievement -->
+        <test-method signature="check_Validation_Message_For_Achievement_Delete_Value()[pri:20, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:53:59 IST" name="check_Validation_Message_For_Achievement_Delete_Value" finished-at="2024-07-30T10:54:01 IST" duration-ms="2345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Achievement_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Sale()[pri:21, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:54:01 IST" name="check_Validation_Message_For_Sale" finished-at="2024-07-30T10:54:04 IST" duration-ms="2313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Sale -->
+        <test-method signature="check_Validation_Message_For_Sale_Delete_Value()[pri:22, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:54:04 IST" name="check_Validation_Message_For_Sale_Delete_Value" finished-at="2024-07-30T10:54:06 IST" duration-ms="2355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Sale_Delete_Value -->
+        <test-method signature="check_Validation_Message_For_Balance_Field()[pri:23, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:54:06 IST" name="check_Validation_Message_For_Balance_Field" finished-at="2024-07-30T10:54:08 IST" duration-ms="2249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Balance_Field -->
+        <test-method signature="check_Validation_Message_For_Balance_Field_Delete_Value()[pri:24, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:54:08 IST" name="check_Validation_Message_For_Balance_Field_Delete_Value" finished-at="2024-07-30T10:54:11 IST" duration-ms="2462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Validation_Message_For_Balance_Field_Delete_Value -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage@12591ac8]" started-at="2024-07-30T10:54:11 IST" name="tearDown" finished-at="2024-07-30T10:54:11 IST" duration-ms="115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed -->
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage -->
     </test> <!-- OasysDataCAMS -->
   </suite> <!-- Suite -->
 </testng-results>
