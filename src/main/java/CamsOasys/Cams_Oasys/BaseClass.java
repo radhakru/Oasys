@@ -11,7 +11,7 @@ public class BaseClass {
 	private static WebDriver driver;
 	
 	public static WebDriver getDriver() {
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Driver//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Driver//chromedriver1.exe");
 		
 		if(driver==null) {
 			driver=new ChromeDriver();
