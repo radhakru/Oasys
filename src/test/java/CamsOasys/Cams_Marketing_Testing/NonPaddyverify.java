@@ -18,8 +18,9 @@ import CamsOasys.Cams_Marketing_Object_page.LoginPage;
 import CamsOasys.Cams_Marketing_Object_page.NonPaddyReoprt;
 import CamsOasys.Cams_Marketing_Object_page.ProcurementOfNonPaddy;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingNonPaddyExcel;
-
+import CamsOasys.Cams_Marketing_Utility.ScreenCapture;
 import CamsOasys.Cams_Oasys.BaseClass;
+import io.cucumber.java.AfterAll;
  
 
 public class NonPaddyverify extends BaseClass {
@@ -53,14 +54,17 @@ public class NonPaddyverify extends BaseClass {
 
 	}
 
-	@Test(priority = 1)
-	public void click_on_login() throws IOException {
+	@Test(dataProvider = "test", dataProviderClass = ReadCamsMarketingNonPaddyExcel.class,priority = 1)
+	
+	public void click_on_login(String name, String emailId, String pass, String district, String circle_value,
+			String block_value, String society_value, String numberoffarmer, String ppc_value, String SoldPaddy,
+			String paddyprocedure, String receiptissue, String noteissue, String notenotissue) throws IOException {
 		System.out.println("Url site before click on login button...." + driver.getCurrentUrl());
 //		lp.click_On_Login_Dashboard();
 //		wait=new WebDriverWait(driver,10);
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
-		lp.enter_Username_Field("admin194@gmail.com");
-		lp.enter_Password_Field("Cams@1234");
+		lp.enter_Username_Field("admin194@gmail.com");//emailId.trim()
+		lp.enter_Password_Field("Cams@1234");//password.trim()
 		ScreenCapture.passScreenCapture();
 
 		lp.click_On_Signin_Button();
@@ -186,7 +190,7 @@ public class NonPaddyverify extends BaseClass {
 		nonpaddyreport.click_On_Signout();
 		Thread.sleep(2000);
 	}
-
+	
 	
 
 }

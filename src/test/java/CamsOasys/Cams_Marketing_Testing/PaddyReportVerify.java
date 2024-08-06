@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -16,6 +17,7 @@ import CamsOasys.Cams_Marketing_Object_page.LoginPage;
 import CamsOasys.Cams_Marketing_Object_page.PaddyReport;
 import CamsOasys.Cams_Marketing_Object_page.ProcurementOfPaddy;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingPaddyExcel;
+import CamsOasys.Cams_Marketing_Utility.ScreenCapture;
 import CamsOasys.Cams_Oasys.BaseClass;
 
 public class PaddyReportVerify extends BaseClass {
@@ -55,14 +57,18 @@ public class PaddyReportVerify extends BaseClass {
 
 	}
 
-	@Test(priority = 1)
-	public void click_on_login() throws IOException {
+	@Test(dataProvider = "test", dataProviderClass = ReadCamsMarketingPaddyExcel.class,priority = 1)
+	public void click_on_login(String pacsname, String emailId, String Pacspass, String district_cooperative,
+			String circle_pacs, String pacs_block, String Society, String Number_Of_Verifired_Farmer,
+			String Name_Of_PPC, String Number_Of_Farmer_Sold_Paddy, String Quantity_Of_Paddy_Procedure,
+			String Quntity_Against_which_vendor_Receipt, String which_vendor_Note_Issue, String which_Vendor_Not_Issue,
+			String arcs_district, String arcs_circle, String arcs_block) throws IOException {
 		System.out.println("Url site before click on login button...." + driver.getCurrentUrl());
 //		lp.click_On_Login_Dashboard();
 //		wait=new WebDriverWait(driver,10);
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
-		lp.enter_Username_Field("admin194@gmail.com");
-		lp.enter_Password_Field("Cams@1234");
+		lp.enter_Username_Field("admin194@gmail.com");//emailId.trim()
+		lp.enter_Password_Field("Cams@1234");//password.trim()
 		ScreenCapture.passScreenCapture();
 
 		lp.click_On_Signin_Button();
@@ -235,5 +241,10 @@ public class PaddyReportVerify extends BaseClass {
 		paddyreport.click_On_SignOut();
 		Thread.sleep(2000);
 	}
+	
+//	@AfterTest
+//	public void tearDown() {
+//		driver.close();
+//	}
 
 }

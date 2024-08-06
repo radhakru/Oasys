@@ -32,12 +32,14 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 	}
 
 	@Test(priority = 1)
-	public void click_On_Login() {
+	public void click_On_Login() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get("http://cams.demoapplication.in/");
 		lp.click_On_Login_Dashboard();
+		Thread.sleep(2000);
 		lp.click_On_Arcs_And_Drcs();
-		lp.enter_UserNameForArcsandDrcs("payal1@gmail.com");
+		Thread.sleep(2000);
+		lp.enter_UserNameForArcsandDrcs("payal@oasys.com");//previous username-payal1@gmail.com
 		lp.enter_PasswordForArcsandDrcs("Oasys@1234");
 		lp.click_On_Sign_In_Button_ArcsandDrcs();
 
@@ -67,8 +69,8 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 				Thread.sleep(2000);
 				loaar.enter_Reason("Reject.....");
 				Thread.sleep(2000);
-				//loaar.click_On_Approve_Button();
-				loaar.click_On_Reject_Button();
+				loaar.click_On_Approve_Button();
+				//loaar.click_On_Reject_Button();
 				Thread.sleep(2000);
 				System.out.println("Status...  "+loaar.get_Status_Value());
 				Thread.sleep(2000);

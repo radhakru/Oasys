@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
-	<listener class-name="CamsOasys.Cams_Marketing_Utility.ExtentReport"/>
-</listeners>
-  <test name="OasysDataCAMS">
-    <classes>
-         <!--  <class name="CamsOasys.Cams_Oasys.CamsEntry"/>-->
-               <!--   <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/>-->
-           <!--   <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/>-->
-                <!--  <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>-->
-              <!--  <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/>-->
-            
-            <!-- verify validation message for sale of seed -->
-            <!--   <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed"/>-->
-            <!--   <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage"/>-->
-              
-               <!--  <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfSeedApproveAndRejectDRCS"/>-->
-                 <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfPaddyApproveAndRejectDrcs"/>
-              
-    </classes>
-  </test> <!-- Test -->
+	<listeners>
+		<listener
+			class-name="CamsOasys.Cams_Marketing_Utility.ExtentReport" />
+	</listeners>
+	<test name="OasysDataCAMS">
+		<classes>
+			<!-- <class name="CamsOasys.Cams_Oasys.CamsEntry"/> -->
+			
+			
+			<!-- For Verify the Pacs functional flow and report -->
+			
+			<!--   
+			<class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/> 
+			 <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/> 
+			 <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>
+			 <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/> 
+			 -->
+
+
+			 <!-- Approve and  Reject process  -->
+			  <!--  <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfSeedApproveAndRejectDRCS"/>-->
+			<!-- <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfPaddyApproveAndRejectDrcs"/> -->
+			<!-- <class name="CamsOasys.Cams_Marketing_Testing.VerifyNonPaddyApproveAndRejectDrcs"/> -->
+			
+			
+			<!-- Edit functional -->
+			
+			 <!-- <class name="CamsOasys.Cams_Marketing_Testing.EditListOfSeedDrcs" />-->
+			<!--   <class name="CamsOasys.Cams_Marketing_Testing.EditListOfPaddyDrcs"/> -->
+			<!-- <class name="CamsOasys.Cams_Marketing_Testing.EditListOfNonPaddyDrcs"/>-->
+
+
+			<!-- verify validation message for sale of seed -->
+			  <!-- <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed"/>-->
+			  <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage"/>
+		   <!-- <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForPaddyPage"/>-->
+		 
+
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

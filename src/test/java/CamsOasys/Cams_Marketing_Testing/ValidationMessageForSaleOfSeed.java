@@ -27,10 +27,11 @@ public class ValidationMessageForSaleOfSeed extends BaseClass {
 	}
 
 	@Test(priority = 1)
-	public void click_On_Login() {
+	public void click_On_Login() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get("http://cams.demoapplication.in/");
 		lp.click_On_Login_Dashboard();
+		Thread.sleep(2000);
 		lp.enter_Username_Field("admin194@gmail.com");
 		lp.enter_Password_Field("Cams@1234");
 		lp.click_On_Signin_Button();

@@ -1,4 +1,4 @@
-package CamsOasys.Cams_Marketing_Testing;
+package CamsOasys.Cams_Marketing_Utility;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,5 +35,16 @@ public class ScreenCapture extends BaseClass {
         // Now you can do whatever you need to do with it, for example copy somewhere
         FileUtils.copyFile(scrFile, new File("C:\\Users\\nirak\\Desktop\\Radhakrushna_OASYS\\Cams_Oasys\\Screenshots\\FailedScreenShot\\"+sdf.format(d)+".png"));
 
+    }
+    public static void deleteFiles(File dirPath)
+    {
+    	File filesList[] = dirPath.listFiles();
+    	for(File file : filesList) {
+            if(file.isFile()) {
+               file.delete();
+            } else {
+               deleteFiles(file);
+            }
+         }
     }
 }

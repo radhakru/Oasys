@@ -22,8 +22,8 @@ public class ListOfSeedApproveAndRejectDrcs {
 	}
 	
 	//status column grap
-	private By status=By.xpath("//table[@id='datatable']/tbody/tr[last()]/td[5]/span");
-	private By lookButton=By.xpath("//table[@id='datatable']/tbody/tr[last()]/td[6]/a/button");
+	private By status=By.xpath("//table[@id='datatable']/tbody/tr[1]/td[5]/span");
+	private By lookButton=By.xpath("//table[@id='datatable']/tbody/tr[1]/td[6]/a/button");
 	private By locate_Placed_To_Ossc=By.xpath("//*[text()='Indent Placed To OSSC:']/following-sibling::span");
 	private By lifted_Vale=By.xpath("//*[text()='Lifted:']/following-sibling::span");
 	private By achievement_value=By.xpath("//*[text()='Achievement(In %):']/following-sibling::span");

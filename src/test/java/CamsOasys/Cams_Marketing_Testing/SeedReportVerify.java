@@ -22,6 +22,7 @@ import CamsOasys.Cams_Marketing_Object_page.SeedReport;
 import CamsOasys.Cams_Marketing_Object_page.saleOfSeed;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsLogin;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingExcel;
+import CamsOasys.Cams_Marketing_Utility.ScreenCapture;
 import CamsOasys.Cams_Oasys.BaseClass;
 
 public class SeedReportVerify extends BaseClass {
@@ -43,7 +44,7 @@ public class SeedReportVerify extends BaseClass {
 	public ReadCamsMarketingExcel readcamsexcel;
 	public int count = 0;
 
-	@BeforeTest
+	@BeforeSuite
 	public void setUp() {
 		driver = getDriver();
 		sos = new saleOfSeed(driver);

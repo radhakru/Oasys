@@ -38,8 +38,14 @@ public class VerifyListOfPaddyApproveAndRejectDrcs extends BaseClass {
 		driver.manage().window().maximize();
 		driver.get("http://cams.demoapplication.in/");
 		lp.click_On_Login_Dashboard();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		lp.click_On_Arcs_And_Drcs();
-		lp.enter_UserNameForArcsandDrcs("payal1@gmail.com");
+		lp.enter_UserNameForArcsandDrcs("payal@oasys.com");//previous username-payal1@gmail.com
 		lp.enter_PasswordForArcsandDrcs("Oasys@1234");
 		lp.click_On_Sign_In_Button_ArcsandDrcs();
 

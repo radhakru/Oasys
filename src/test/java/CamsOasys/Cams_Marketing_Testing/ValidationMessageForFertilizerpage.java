@@ -34,8 +34,9 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 	}
 
 	@Test(priority = 1)
-	public void landing_On_The_Marketing_Page() {
+	public void landing_On_The_Marketing_Page() throws InterruptedException {
 		lp.click_On_Login_Dashboard();
+		Thread.sleep(2000);
 		lp.enter_Username_Field("admin194@gmail.com");
 		lp.enter_Password_Field("Cams@1234");
 		lp.click_On_Signin_Button();
@@ -55,58 +56,56 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 	@Test(priority = 3)
 	public void check_Validation_Message_For_TargetField() throws InterruptedException {
 		String validation_message = "Please Enter Target.";
-		driver.findElement(By.xpath("//label[contains(text(),'Name Of PACS')]")).click();
+		//driver.findElement(By.xpath("//label[contains(text(),'Name Of PACS')]")).click();
 		Actions act = new Actions(driver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
-		Thread.sleep(2000);
+		act.sendKeys(Keys.PAGE_UP).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='target']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='target']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
 			Assert.assertEquals(validation_message, actual_message);
-	
+		Thread.sleep(2000);
 
 	}
 
 	@Test(priority = 4)
 	public void check_Validation_Message_For_Target_Delete_Value() throws InterruptedException {
 		String validation_message = "Please Enter Target.";
-		driver.findElement(By.id("target")).sendKeys("1000");
-		driver.findElement(By.id("target")).clear();
-		//driver.findElement(By.xpath("//label[contains(text(),'Name Of PACS')]")).click();
-		Actions act = new Actions(driver);
+		Actions act=new Actions(driver);
+		act.click(driver.findElement(By.id("target"))).sendKeys("10000").build().perform();
+		act.click(driver.findElement(By.id("target"))).doubleClick().build().perform();
+		act.sendKeys(Keys.BACK_SPACE);
+//		driver.findElement(By.id("target")).sendKeys("1000");
+//		driver.findElement(By.id("target")).clear();
+		
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
-		//act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
+		act.sendKeys(Keys.PAGE_UP).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='target']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='target']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
-	
+//	Thread.sleep(2000);
 			Assert.assertEquals(validation_message, actual_message);
 	
 	}
 
 	@Test(priority = 5)
 	public void check_Validation_Message_For_Quantity_Of_Fertilizer() throws InterruptedException {
-		driver.findElement(By.id("target")).sendKeys("100");
+		driver.findElement(By.id("target")).sendKeys("1000");
 		String validation_message = "Please Enter Quantity Of Fertilizer Prepositioned.";
-		//driver.findElement(By.xpath("//label[contains(text(),'Name Of PACS')]")).click();
 		Actions act = new Actions(driver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		//Thread.sleep(2000);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 		act.sendKeys(Keys.PAGE_UP).build().perform();
+		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='Prepositioned']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='Prepositioned']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
-
+		
 		
 			Assert.assertEquals(validation_message, actual_message);
 		
@@ -116,19 +115,21 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 	@Test(priority = 6)
 	public void check_Validation_Message_For_Quantity_Of_Fortilizer_Delete_Value() throws InterruptedException {
 		String validation_message = "Please Enter Quantity Of Fertilizer Prepositioned.";
-		driver.findElement(By.id("Prepositioned")).sendKeys("100");
-		driver.findElement(By.id("Prepositioned")).clear();
 		Actions act = new Actions(driver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		act.click(driver.findElement(By.id("Prepositioned"))).sendKeys("100").build().perform();
+		act.click(driver.findElement(By.id("Prepositioned"))).doubleClick().build().perform();
+		act.sendKeys(Keys.BACK_SPACE).build().perform();
+		
+//		Thread.sleep(2000);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 		act.sendKeys(Keys.PAGE_UP).build().perform();
+//		Thread.sleep(2000);
+		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='Prepositioned']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='Prepositioned']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
-
-		
+//		Thread.sleep(2000);
 			Assert.assertEquals(validation_message, actual_message);
 		
 
@@ -140,7 +141,7 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 		String validation_message = "Please Enter Last Week Achievement.";
 		//driver.findElement(By.xpath("//label[contains(text(),'Name Of PACS')]")).click();
 		Actions act = new Actions(driver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(2000);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
@@ -148,7 +149,7 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='achievement']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='achievement']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		
 			Assert.assertEquals(validation_message, actual_message);
 		
@@ -158,17 +159,19 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 	@Test(priority = 8)
 	public void check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value() throws InterruptedException {
 		String validation_message = "Please Enter Last Week Achievement.";
-		driver.findElement(By.id("achievement")).sendKeys("1000");
-		driver.findElement(By.id("achievement")).clear();
 		Actions act = new Actions(driver);
-		act.sendKeys(Keys.PAGE_DOWN).build().perform();
+		act.click(driver.findElement(By.id("achievement"))).sendKeys("1000").build().perform();
+		act.click(driver.findElement(By.id("achievement"))).doubleClick().build().perform();
+		act.sendKeys(Keys.BACK_SPACE);
 		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 		act.sendKeys(Keys.PAGE_UP).build().perform();
+//		Thread.sleep(2000);
+		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='achievement']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='achievement']/following-sibling::label"))
 				.getText();
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		
 			Assert.assertEquals(validation_message, actual_message);
 		
@@ -179,10 +182,12 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 		driver.findElement(By.id("achievement")).sendKeys("1000");
 		String validation_message = "Please Enter Cash Sale.";
 		Actions act = new Actions(driver);
-		
+		//Thread.sleep(2000);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Submit']")));
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='cash-sale']/following-sibling::label")));
 		String actual_message = driver.findElement(By.xpath("//input[@id='cash-sale']/following-sibling::label"))
 				.getText();
 		
@@ -247,7 +252,7 @@ public class ValidationMessageForFertilizerpage extends BaseClass {
 		
 	}
 	@Test(priority=14)
-	public void check_Validation_Message_For_TotalSale() throws InterruptedException {
+	public void check_Validation_Message_For_Delete_TotalSale() throws InterruptedException {
 		String validation_message="Please Enter Total Sale.";
 		driverwait.until(ExpectedConditions.visibilityOfElementLocated(By.id("total-sale")));
 		driver.findElement(By.id("total-sale")).sendKeys("200");

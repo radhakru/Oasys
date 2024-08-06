@@ -21,6 +21,7 @@ import CamsOasys.Cams_Marketing_Object_page.SeedReport;
 import CamsOasys.Cams_Marketing_Object_page.saleOfSeed;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingExcel;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingFertilizerExcel;
+import CamsOasys.Cams_Marketing_Utility.ScreenCapture;
 import CamsOasys.Cams_Oasys.BaseClass;
 
 public class FertilizerReportVerify extends BaseClass {
@@ -52,20 +53,23 @@ public class FertilizerReportVerify extends BaseClass {
 		lp = new LoginPage(driver);
 		readcamsmarketingfertilizer = new ReadCamsMarketingFertilizerExcel();
 
-		driver.manage().window().maximize();
-		driver.get("http://cams.demoapplication.in/");
+//		driver.manage().window().maximize();
+//		driver.get("http://cams.demoapplication.in/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
-	@Test(priority = 1)
-	public void click_on_login() throws IOException {
+	@Test(dataProvider = "test", dataProviderClass = ReadCamsMarketingFertilizerExcel.class,priority = 1)
+	public void click_on_login(String pacsname, String eamilid, String password, String District,
+			String NameOfPacks, String Target, String Quantity_Of_Fertilizer_Prepositioned, String LastWeek,
+			String Cash_Sale, String B_Component, String TotalSale, String Out_Of_Which_Urea, String Balance_excel,
+			String Achievement_excel, String Sale_excel, String Balance_value) throws IOException {
 		System.out.println("Url site before click on login button...." + driver.getCurrentUrl());
-		lp.click_On_Login_Dashboard();
+		//lp.click_On_Login_Dashboard();
 		wait=new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
-		lp.enter_Username_Field("admin194@gmail.com");
-		lp.enter_Password_Field("Cams@1234");
+		lp.enter_Username_Field("admin194@gmail.com");//eamilid.trim()
+		lp.enter_Password_Field("Cams@1234");//password.trim()
 		ScreenCapture.passScreenCapture();
 
 		lp.click_On_Signin_Button();
@@ -203,10 +207,17 @@ public class FertilizerReportVerify extends BaseClass {
 		String mes = fr.get_Sale();
 		Assert.assertEquals(mes, Sale.concat(".0"));
 	}
-
-	@AfterTest
-	public void teardown() {
-		driver.close();
+	
+	@Test(priority=14)
+	public void click_OnSignout() throws InterruptedException {
+		fr.click_On_Signout();
+		Thread.sleep(2000);
 	}
+
+
+//	@AfterTest
+//	public void teardown() {
+//		driver.close();
+//	}
 
 }

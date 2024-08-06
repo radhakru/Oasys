@@ -6,14 +6,13 @@
   </listeners>
   <test thread-count="5" name="OasysDataCAMS(failed)">
     <classes>
-      <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfPaddyApproveAndRejectDrcs">
+      <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage">
         <methods>
-          <include name="click_On_Login"/>
+          <include name="check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="check_List_Of_Paddy"/>
         </methods>
-      </class> <!-- CamsOasys.Cams_Marketing_Testing.VerifyListOfPaddyApproveAndRejectDrcs -->
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage -->
     </classes>
   </test> <!-- OasysDataCAMS(failed) -->
 </suite> <!-- Failed suite [Suite] -->

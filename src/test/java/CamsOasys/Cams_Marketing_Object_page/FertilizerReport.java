@@ -38,6 +38,9 @@ public class FertilizerReport {
 //	private By pagination_Value = By.xpath("//li[@id='fertilizer_report_next']/a");
 //	private By next_button = By.xpath("//*[@id='fertilizer_report_next']/a");
 //	private By last_Page = By.xpath("//ul[@class='pagination']/li[last()-1]");
+	
+	private By profilel_page = By.xpath("//button[@id='page-header-user-dropdown']");
+	private By signout = By.xpath("//button[@id='page-header-user-dropdown']/following-sibling::div/a[3]");
 
 	public WebDriverWait createWaitInstance() {
 		wait = new WebDriverWait(ldriver, 120);
@@ -136,6 +139,11 @@ public class FertilizerReport {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Balance_Urea));
 		String mes = ldriver.findElement(Balance_Urea).getText();
 		return mes;
+	}
+	public void click_On_Signout() {
+		ldriver.findElement(profilel_page).click();
+		ldriver.findElement(signout).click();
+
 	}
 
 	/*

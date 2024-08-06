@@ -22,6 +22,7 @@ import com.github.dockerjava.api.model.Driver;
 import CamsOasys.Cams_Marketing_Object_page.LoginPage;
 import CamsOasys.Cams_Marketing_Utility.ExtentReport;
 import CamsOasys.Cams_Marketing_Utility.ReadCamsLogin;
+import CamsOasys.Cams_Marketing_Utility.ScreenCapture;
 import CamsOasys.Cams_Oasys.BaseClass;
 //@Listeners(ExtentReport.class)
 public class CamsEntry extends BaseClass {
