@@ -55,12 +55,12 @@ public class ReadCamsMarketingExcel {
 
 		// initialize the Object[][].
 
-		object = new String[rowsize][14];
+		object = new String[rowsize][16];
 
 		// store all the excel value to two dimensional array which is object[][].
 		for (int i = rowvalue; i <= rowsize; i++) {
-			for (int j = 0; j < 14; j++) {
-				if (j == 5 || j == 6 || j == 8 || j == 9 || j == 10 || j == 11 || j == 12 || j == 13) {
+			for (int j = 0; j < 16; j++) {
+				if (j==7 || j == 8 || j == 10 || j == 11 || j == 12 || j == 13 || j==14 || j==15 ) {
 					object[i - 1][j] = String.valueOf(xssfSheet.getRow(i).getCell(j).getNumericCellValue());
 				} else {
 					object[i - 1][j] = xssfSheet.getRow(i).getCell(j).getStringCellValue();
@@ -73,7 +73,7 @@ public class ReadCamsMarketingExcel {
 //		System.out.println("row number" + object[1].length);
 //		// return this
 		for (int i = rowvalue; i <= rowsize; i++) {
-			for (int j = 0; j < 14; j++) {
+			for (int j = 0; j < 16; j++) {
 				System.out.println("object print" + object[i - 1][j]);
 			}
 		}

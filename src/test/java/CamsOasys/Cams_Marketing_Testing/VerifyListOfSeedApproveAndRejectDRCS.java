@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import CamsOasys.Cams_Marketing_Object_page.ListOfSeedApproveAndRejectDrcs;
 import CamsOasys.Cams_Marketing_Object_page.LoginPage;
 import CamsOasys.Cams_Marketing_Utility.ListOfSeedExcelRead;
+import CamsOasys.Cams_Marketing_Utility.ReadCamsMarketingExcel;
 import CamsOasys.Cams_Oasys.BaseClass;
 
 public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
@@ -21,13 +22,15 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 	public WebDriverWait driverwait;
 	public ListOfSeedApproveAndRejectDrcs loaar;
 	public String value = null;
-
+	public ListOfSeedExcelRead readexcel;
+	public int count=0;
 	@BeforeTest
 	public void setUp() {
 		driver = getDriver();
 		lp = new LoginPage(driver);
 		loaar = new ListOfSeedApproveAndRejectDrcs(driver);
 		driverwait = new WebDriverWait(driver, 120);
+		readexcel=new ListOfSeedExcelRead();
 
 	}
 
@@ -72,7 +75,11 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 				loaar.click_On_Approve_Button();
 				//loaar.click_On_Reject_Button();
 				Thread.sleep(2000);
+				count++;
 				System.out.println("Status...  "+loaar.get_Status_Value());
+				
+				readexcel.update_cell_value(count,loaar.get_Status_Value());
+				
 				Thread.sleep(2000);
 
 			}
@@ -86,7 +93,7 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 		} catch (Throwable e) {
 			e.getMessage();
 		}
-
+		
 		if (value != null || value==null) {
 			loaar.click_On_look_Button();
 			System.out.println("loctaed value= " + loaar.get_Located_Placed_To_Ossc());
@@ -108,9 +115,9 @@ public class VerifyListOfSeedApproveAndRejectDRCS extends BaseClass {
 
 	}
 
-	@AfterTest
-	public void tearDown() {
-		driver.close();
-	}
+//	@AfterTest
+//	public void tearDown() {
+//		driver.close();
+//	}
 
 }

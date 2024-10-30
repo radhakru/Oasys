@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -83,6 +84,30 @@ public class ListOfSeedExcelRead {
 		return object;
 
 	}
+	public void update_cell_value(int rownum, String text) throws IOException {
+		fis = new FileInputStream(System.getProperty("user.dir") + "//Externaldata//Salel_Of_Seed.xlsx");
+		xssfworkbook = new XSSFWorkbook(fis);
+		xssfSheet = xssfworkbook.getSheet("Sheet1");
+		short last_cell = xssfSheet.getRow(rownum).getLastCellNum();
+		System.out.println("enter in the method" + last_cell);
+		System.out.println("String cell value for ..." + xssfSheet.getRow(rownum).getCell(17).getCellType());
+		// xssfSheet.getRow(rownum).createCell(last_cell).setCellValue(text);
+		
+		if (xssfSheet.getRow(rownum).getCell(17).getCellType().equals(CellType.STRING)
+				|| xssfSheet.getRow(rownum).getCell(18).getCellType().equals(CellType.BLANK)
+				|| xssfSheet.getRow(rownum).getCell(18).getCellType().equals(CellType.STRING)) {
+			xssfSheet.getRow(rownum).createCell(18).setCellValue(text);
+			fos = new FileOutputStream(System.getProperty("user.dir") + "//Externaldata//Salel_Of_Seed.xlsx");
+			xssfworkbook.write(fos);
+		}
+		System.out.println("Last cell value after adding login_staus cell in excel..... "
+				+ xssfSheet.getRow(rownum).getLastCellNum());
+
+		fos.close();
+		fis.close();
+
+	}
+	
 
 
 }

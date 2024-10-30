@@ -67,14 +67,16 @@ public class PaddyReportVerify extends BaseClass {
 //		lp.click_On_Login_Dashboard();
 //		wait=new WebDriverWait(driver,10);
 //		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='PACS Username']/following-sibling::input[@id='username']")));
-		lp.enter_Username_Field("admin194@gmail.com");//emailId.trim()
-		lp.enter_Password_Field("Cams@1234");//password.trim()
+		lp.enter_Username_Field(emailId);//emailId.trim()
+		lp.enter_Password_Field(Pacspass);//password.trim()
 		ScreenCapture.passScreenCapture();
 
 		lp.click_On_Signin_Button();
 		System.out.println("after click on login button=" + driver.getCurrentUrl());
 		// http://cams.demoapplication.in/Seeds_Web_New/Account/Login
 		if (driver.getCurrentUrl().equals("http://cams.demoapplication.in/Seeds_Web_New/Account/Login")) {
+			count++;
+			readcamsmarketingpaddyexcel.update_cell_value(count,"not Success");
 			ScreenCapture.failScreenCapture();
 		} else {
 			ScreenCapture.passScreenCapture();

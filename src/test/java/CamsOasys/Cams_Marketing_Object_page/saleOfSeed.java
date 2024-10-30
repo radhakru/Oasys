@@ -31,6 +31,8 @@ public class saleOfSeed {
 	private By submitButton=By.id("saveData");
 	private By clickOnSubmitPopup=By.xpath("(//div[@class='swal2-actions']/button[@type='button'])[1]");
 	private By clickonOkButton=By.xpath("//div[@class='swal2-actions']/button[text()='OK']");
+	private By croptype=By.id("croptypeid");
+	private By entrydate=By.xpath("//input[@id='entrydate']");
 	
 	public WebDriverWait createwaitMethodInstance() {
 		wait=new WebDriverWait(ldriver,120);
@@ -110,6 +112,19 @@ public class saleOfSeed {
 		wait=createwaitMethodInstance();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(clickonOkButton));
 		ldriver.findElement(clickonOkButton).click();
+	}
+	public void select_seed_croptype(String mes) {
+		wait=createwaitMethodInstance();
+		select=new Select(ldriver.findElement(croptype));
+		select.deselectByVisibleText(mes);
+			
+		
+	}
+	
+	public void select_seed_EntryDate(String mes) {
+		wait=createwaitMethodInstance();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(entrydate));
+		ldriver.findElement(entrydate).sendKeys(mes);
 	}
 
 }

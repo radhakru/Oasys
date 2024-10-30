@@ -6,13 +6,77 @@
   </listeners>
   <test thread-count="5" name="OasysDataCAMS(failed)">
     <classes>
-      <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage">
+      <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify">
         <methods>
-          <include name="check_Validation_Messsage_For_LastWeek_Achievement_Delete_Value"/>
+          <include name="verify_BComponent"/>
+          <include name="verify_Achievement"/>
+          <include name="verify_Total_Sale"/>
+          <include name="verify_FertilizerData_For_Target_value"/>
+          <include name="verify_Out_OfWhich_Urea"/>
+          <include name="verify_Balance"/>
+          <include name="verify_Balance_Urea"/>
+          <include name="verify_LastWeek_Value"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="verify_FertilizerData_For_Quality_Of_Fortilizer_Prepositioned_Value"/>
+          <include name="verify_Sale"/>
+          <include name="click_OnSignout"/>
+          <include name="verify_CashSale"/>
+          <include name="submit_Sale_Of_Fertilizer" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage -->
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify -->
+      <class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify">
+        <methods>
+          <include name="verify_Districtname_From_Sale_Of_Seed_ReportPage"/>
+          <include name="verify_Indent_Of_Ossc_Value"/>
+          <include name="verify_BComponent_Value"/>
+          <include name="verify_LastWeek_Value"/>
+          <include name="verify_Cashsale_Value"/>
+          <include name="verify_Total_Value"/>
+          <include name="submit_Sell_Of_Seed_Data" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tear_Down"/>
+          <include name="verify_Balanace_With_Pacs_Lampcs"/>
+          <include name="verify_Lifted_Value"/>
+          <include name="verify_Achievement_To_Indent"/>
+          <include name="verify_Pacsname_Form_Sale_Of_SeedReportPage"/>
+        </methods>
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.SeedReportVerify -->
+      <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify">
+        <methods>
+          <include name="verify_Note_Issue"/>
+          <include name="verify_Note_Not_Issue"/>
+          <include name="click_on_signout"/>
+          <include name="verify_Non_Paddy"/>
+          <include name="verify_Receipt_Issue"/>
+          <include name="verify_block"/>
+          <include name="verify_Sold_Paddy"/>
+          <include name="verify_ppc"/>
+          <include name="submit_Non_Paddy_Page" invocation-numbers="0"/>
+          <include name="verify_circle"/>
+          <include name="verify_society"/>
+          <include name="verify_Paddy_Procedure"/>
+          <include name="setUp"/>
+          <include name="verify_Farmer_Verify"/>
+        </methods>
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.NonPaddyverify -->
+      <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify">
+        <methods>
+          <include name="verify_Quantity_Against_Which_TP_AC_Note_Not_Issued"/>
+          <include name="setUp"/>
+          <include name="verify_Vendor_Receipt_Issue"/>
+          <include name="verify_No_Of_Farmer_verified"/>
+          <include name="verify_Name_Of_PPC"/>
+          <include name="submit_Paddy_Form_Page" invocation-numbers="0"/>
+          <include name="verify_Block_Value"/>
+          <include name="verify_Paddy_Procedure"/>
+          <include name="verify_PeddyReport"/>
+          <include name="click_On_Signout"/>
+          <include name="verify_Quantity_Against_Which_TP_AC_Note_Issued"/>
+          <include name="verify_District_value"/>
+          <include name="verify_Farmer_Sold_Paddy"/>
+          <include name="verify_Circle_Value"/>
+        </methods>
+      </class> <!-- CamsOasys.Cams_Marketing_Testing.PaddyReportVerify -->
     </classes>
   </test> <!-- OasysDataCAMS(failed) -->
 </suite> <!-- Failed suite [Suite] -->

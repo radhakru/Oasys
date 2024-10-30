@@ -6,8 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.bouncycastle.crypto.agreement.srp.SRP6Client;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -43,7 +45,7 @@ public class SeedReportVerify extends BaseClass {
 	public JavascriptExecutor js;
 	public ReadCamsMarketingExcel readcamsexcel;
 	public int count = 0;
-
+	public String url="http://cams.demoapplication.in/";//https://cams.odisha.gov.in/
 	@BeforeSuite
 	public void setUp() {
 		driver = getDriver();
@@ -51,9 +53,9 @@ public class SeedReportVerify extends BaseClass {
 		sp = new SeedReport(driver);
 		lp = new LoginPage(driver);
 		readcamsexcel = new ReadCamsMarketingExcel();
-
+		
 		driver.manage().window().maximize();
-		driver.get("http://cams.demoapplication.in/");
+		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
@@ -75,7 +77,10 @@ public class SeedReportVerify extends BaseClass {
 		System.out.println("after click on login button=" + driver.getCurrentUrl());
 		// http://cams.demoapplication.in/Seeds_Web_New/Account/Login
 		if (driver.getCurrentUrl().equals("http://cams.demoapplication.in/Seeds_Web_New/Account/Login")) {
+			count++;
+			readcamsexcel.update_cell_value(count, "not verified");
 			ScreenCapture.failScreenCapture();
+			
 		} else {
 			ScreenCapture.passScreenCapture();
 		}
@@ -116,7 +121,8 @@ public class SeedReportVerify extends BaseClass {
 	
 		sos.enter_Cash_Sale(CashSale);
 
-		
+		Actions act=new Actions(driver);
+		act.sendKeys(Keys.PAGE_DOWN).build().perform();
 		
 		sos.enter_BComponenet(B_Componenet);
 
@@ -134,7 +140,7 @@ public class SeedReportVerify extends BaseClass {
 		ScreenCapture.passScreenCapture();
 
 		sos.click_On_Submit_Button();
-
+		
 		sos.click_On_Submit_Button_Popup();
 
 		sos.click_On_Ok_Button();

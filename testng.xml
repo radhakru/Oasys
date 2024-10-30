@@ -12,16 +12,18 @@
 			
 			<!-- For Verify the Pacs functional flow and report -->
 			
-			<!--   
+			    
 			<class name="CamsOasys.Cams_Marketing_Testing.SeedReportVerify"/> 
-			 <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/> 
+			 <!--    <class name="CamsOasys.Cams_Marketing_Testing.FertilizerReportVerify"/> 
 			 <class name="CamsOasys.Cams_Marketing_Testing.PaddyReportVerify"/>
-			 <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/> 
-			 -->
+			 <class name="CamsOasys.Cams_Marketing_Testing.NonPaddyverify"/> -->
+			 
+			
+			 
 
 
 			 <!-- Approve and  Reject process  -->
-			  <!--  <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfSeedApproveAndRejectDRCS"/>-->
+			  <!--   <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfSeedApproveAndRejectDRCS"/> -->
 			<!-- <class name="CamsOasys.Cams_Marketing_Testing.VerifyListOfPaddyApproveAndRejectDrcs"/> -->
 			<!-- <class name="CamsOasys.Cams_Marketing_Testing.VerifyNonPaddyApproveAndRejectDrcs"/> -->
 			
@@ -35,7 +37,7 @@
 
 			<!-- verify validation message for sale of seed -->
 			  <!-- <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForSaleOfSeed"/>-->
-			  <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage"/>
+			  <!-- <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForFertilizerpage"/>-->
 		   <!-- <class name="CamsOasys.Cams_Marketing_Testing.ValidationMessageForPaddyPage"/>-->
 		 
 
